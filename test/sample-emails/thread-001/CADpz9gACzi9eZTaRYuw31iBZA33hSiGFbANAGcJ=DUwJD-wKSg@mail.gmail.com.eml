@@ -1,0 +1,108 @@
+X-Apparently-To: nemomacnaught@yahoo.com; Fri, 15 Nov 2019 01:05:34 +0000
+Return-Path: <nemo.macnaught@gmail.com>
+Authentication-Results: mta4189.mail.ne1.yahoo.com; 
+ dkim=pass (ok) header.i=@gmail.com header.s=20161025;
+ spf=pass smtp.mailfrom=@gmail.com;
+ dmarc=pass(p=none sp=quarantine dis=none) header.from=gmail.com;
+Received-SPF: pass (domain of gmail.com designates 209.85.221.169 as permitted sender)
+X-YMailISG: iWlIhtwWLDv4CMJvpVsb.6t4MCKAf8jp4fFkJHCAv3V4dQSb
+ ajq1.UXR32kFb4yU_d.H2uh6eLsQYS4B0h47LGNRYfNEdd6hxOw_5s.UpZV7
+ UUlSqpQtjE6rkcYgTK7E6LXgvZA2dF2CfszppIT3tVZGci97ZfJVoHu0TOWg
+ 73vC.zisgmj1glqQ3903uqlGWYCgTepkFKUFTnV_yBAQX38ldWKefFf9mq.5
+ KfJOj_BiTTB2AcoK_POgsc18k.VA8.YPUckQgTbjEwi.IoR4Ad6JoZXIMD0a
+ zUpddB_.azrxYJRgfzENWgGLBSAKERX_IM9T1cVJgSTB.PffG.JX9t4nKOhK
+ oyvycoAJ9CQ1dB_tSalGiOyDTdbizlooTZeBHWRUGD_O6x9TEUFRLRd3WY5T
+ XJXB5y2UlnXSyU1nyl5AYnIJyjmrxTz5nKWqMUUY3Dcoz4QyCtoCtLMhHXWC
+ tS6Be5TK57pGPbwwvcb0nSysLszjHx9uYPuQqkMF4sdNeaSsyuPVayJ0jIKz
+ m2RLJdKLMdyd8TL9t9nNFCZgr86Gd2C26BeCFmeN.vluSJCG3L21ABGjsW8t
+ 7tWKmBQ1sd833IGx8mvibrBVcfX_b5yV71RoOtMQUrYHJg9dsrQQQW0auuVA
+ jXM8eqA06pfu64N35vBTIK7SsKc.ge9d15trzLLjbOr7KDgNfgoK6opD2q_C
+ 1t0MriZIRfJq9iaGIPKijUyEmTF1mFeGtjF2V7q2xxXPaNetw16sLPqOQGgq
+ wTK5KbiBJFG1br3fZskceOV04rdRDUbljuEnDaOm2xJ6FW2FVyjjfH7Qq0vV
+ Hqwas2TN5TRfVTAM5d4agRWn88MdW7ges8F7NhZFp8GJHNwbNrxiUBf0Mcfe
+ R2zivnZKwuHnXy7u2_G15s_AhvwFdtVtm59KpnlTYP_ibwRwVzHewCwFzmBP
+ U2FzjNYHkpSzlpT7c.vgqodpr6mZ.yOjUtIFOUM_doVgLGRM7dkjCNRFyPYc
+ ticjlE6gRRM95WctId43PAjwOTm9r_GPTChasl2mwKBNrVSMSwM70b4uD43o
+ 5EWX5FBHR6F.Oi0-
+X-Originating-IP: [209.85.221.169]
+Received: from 10.217.130.145  (EHLO mail-vk1-f169.google.com) (209.85.221.169)
+  by mta4189.mail.ne1.yahoo.com with SMTPS; Fri, 15 Nov 2019 01:05:33 +0000
+Received: by mail-vk1-f169.google.com with SMTP id e205so1975382vke.2
+        for <nemomacnaught@yahoo.com>; Thu, 14 Nov 2019 17:05:33 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :cc;
+        bh=jUse8pC1T+3uaxe5F/LUa0aIs6BxA+g6g7cHGElIHwY=;
+        b=qS7ntqu/kKQ4RkcdAOapL0xdpbyTcLF1QtgwWw8IFxWb2tfHbaMLM9/zS/CIYPzjvV
+         4giOsYLw+jMHsRxt5CkLuNLhtvJWb2y1SmNl0h3upMwPhXvyewGfUVJ10+ctgV6yMDl5
+         o6c3QaaQvGp1a6L4WHArs1XsNtDIPBtUeN+jzc9wf4GXIMU06BGYrFUMhVqn/2p5b7AZ
+         bx8LTpgywRP0nfdRUys2dsqS64YWX2zMKfxmkKijOx0C/xgYogrhCeGneU+/65cTHqdR
+         J6ZSWAvUuX/wts5EXoXm1oaUrMvxug3JTcRY3yd+Xr+nFAJsHdRIoiwzAm/p/+yIHDWy
+         Epnw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:cc;
+        bh=jUse8pC1T+3uaxe5F/LUa0aIs6BxA+g6g7cHGElIHwY=;
+        b=VRr7U0E5L4/twOcCxR7Bt0tIEoxaBdE93RZ1H6AIM6BJwRDMmUzGh90MbqIZWROrGp
+         RYda1tMR4afi/E/BFzxf/JxvDhXD2627yzaiXKaSnbEj3sFCGod7zKKa6vZnCwlGMkVw
+         HElYzfs552rZyrAX/WIMkpT/q8+qQhVlgHctXx7zgkQg+Gc8X+U5QrbVPpx/z+L+x3Ow
+         /d3U52nGJJpoq1goDXKHT4/Zq/39ee7j5bmkcq02JDyVA58bf30Ro1ScafCPCNF3XqqX
+         nD7jo7HPDZKs6dzBAR83kDH4kgAwkH50O0DuatkJOlaMvUHFfzU5qRyz1GrAByoJFQk7
+         S3QA==
+X-Gm-Message-State: APjAAAXLPNCaxVYtJU1pp+PFMbkTbvf9vk1XoG3OUbKVrs16TlfOvJA5
+	dDeXZr5Gh/zn4IjFNc29mJs5dEgZpj7EyLgSav81dQ==
+X-Google-Smtp-Source: APXvYqync48Iqr3GmgNPw6W9ptzSn50X3N2QyTgne/c6bBVZD5IEEc4lCLOnedeh3whlpmNg4+NOC65KKT/Bv41Vb9o=
+X-Received: by 2002:a1f:5cd0:: with SMTP id q199mr7151566vkb.83.1573779932939;
+ Thu, 14 Nov 2019 17:05:32 -0800 (PST)
+MIME-Version: 1.0
+References: <1573779328.466488219@f144.i.mail.ru>
+In-Reply-To: <1573779328.466488219@f144.i.mail.ru>
+From: Nemo MacNaught <nemo.macnaught@gmail.com>
+Date: Thu, 14 Nov 2019 17:05:22 -0800
+Message-ID: <CADpz9gACzi9eZTaRYuw31iBZA33hSiGFbANAGcJ=DUwJD-wKSg@mail.gmail.com>
+Subject: Re: This subject line is so fancy
+To: Nemo MacNaught <nemo.macnaught@mail.ru>
+Cc: nemomacnaught@yahoo.com
+Content-Type: multipart/alternative; boundary="000000000000db89910597583139"
+Content-Length: 967
+
+--000000000000db89910597583139
+Content-Type: text/plain; charset="UTF-8"
+
+This is a reply from the Gmail web client.
+
+On Thu, Nov 14, 2019 at 4:55 PM Nemo MacNaught <nemo.macnaught@mail.ru>
+wrote:
+
+> Initial email.
+>
+> --
+> Nemo MacNaught
+>
+
+--000000000000db89910597583139
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"ltr">This is a reply from the Gmail web client=
+.<br></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_a=
+ttr">On Thu, Nov 14, 2019 at 4:55 PM Nemo MacNaught &lt;<a href=3D"mailto:n=
+emo.macnaught@mail.ru">nemo.macnaught@mail.ru</a>&gt; wrote:<br></div><bloc=
+kquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:=
+1px solid rgb(204,204,204);padding-left:1ex">
+<div><div>Initial email.</div>
+
+<div>=C2=A0</div>
+
+<div>
+<div>
+<div>--<br>
+Nemo MacNaught</div>
+</div>
+</div>
+</div>
+</blockquote></div></div>
+
+--000000000000db89910597583139--

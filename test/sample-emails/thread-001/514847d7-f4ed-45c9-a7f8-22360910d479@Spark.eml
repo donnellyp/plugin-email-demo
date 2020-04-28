@@ -1,0 +1,245 @@
+Delivered-To: nemo.macnaught@gmail.com
+Received: by 2002:a9f:2633:0:0:0:0:0 with SMTP id 48csp10783487uag;
+        Thu, 14 Nov 2019 19:00:54 -0800 (PST)
+X-Google-Smtp-Source: APXvYqy75vXfl3wVrZkjsX4zaJ4HKGMiM9Xd0YjXj8BsW8GyMcmKFedqNWDnuHWX4L43ThjOHNH9
+X-Received: by 2002:ac8:724f:: with SMTP id l15mr11947731qtp.234.1573786853975;
+        Thu, 14 Nov 2019 19:00:53 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1573786853; cv=none;
+        d=google.com; s=arc-20160816;
+        b=vJps7VFZLOCFXaKORYh3iZpYabPhLkOl31jm3zT1QcUCLvcwpmERRuEPTx10+syudt
+         MOYDtcUcb3r07TzMRWWpeC1Z52wip2K8ArTtLFj5nqmd1+EaDWwzapaAJNMypJ9dLHBv
+         NqPOV6fT1Ep9IhFMpmHGgCwdGiPSBb9nUfqgORmsdXsATotm0A6MS5RC4wdSTq6YvHWz
+         ctuj0blfhU8Dusd1oKbZ1wTP+zzpx8kMzQ+JHapGJiX0ZQJaoxZVM0A30GPHH9QNqVzQ
+         K5HJ4nRpGHdciz5xlxyMVtVje6t45HjjiXwEiiI7aq4dRzc/xmSwFSEdQ5k8/CTfzL9c
+         QO5g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:references:in-reply-to:message-id:cc:to:from
+         :date:dkim-signature;
+        bh=7YKrov2dZCiaFINV8Th6GXvd91gbexnRuY2LyuE1oiI=;
+        b=GoZFJGv/+mz/LP6yxd7QEN/U7oMZsWZNJgFJpVIUAJLBLCT42hdAl9MsN+WUOS8wZf
+         H6Iu6wm47qQvN6G8WVtOkNAADDXfcmq5pfJmBbp5tJbIt3fyvn3n2/bz8cG4hEJssDPL
+         qbXIBr6FqxHmM36EgH4gZVGVXy6NdooA7a3sdXe57drecqlVxqBEizmz1N3395kySt8u
+         ZV6Qxf2kAb9Am2KqP3ckb2DpvuM1OKxHTurnqhVn7rUtXLQ2/eIE97BOfxhuBrdZERcP
+         ms1j7NjajYNMm7/00SEQdpnm1ij1YaTnllrz0cXk4TuvRIBY+ka8+LiMo5LKEXicliZ2
+         mkvw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=gAJWK7RP;
+       spf=pass (google.com: domain of nemomacnaught@yahoo.com designates 74.6.130.42 as permitted sender) smtp.mailfrom=nemomacnaught@yahoo.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+Return-Path: <nemomacnaught@yahoo.com>
+Received: from sonic308-3.consmr.mail.bf2.yahoo.com (sonic308-3.consmr.mail.bf2.yahoo.com. [74.6.130.42])
+        by mx.google.com with ESMTPS id v138si4677721qka.146.2019.11.14.19.00.53
+        for <nemo.macnaught@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 14 Nov 2019 19:00:53 -0800 (PST)
+Received-SPF: pass (google.com: domain of nemomacnaught@yahoo.com designates 74.6.130.42 as permitted sender) client-ip=74.6.130.42;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=gAJWK7RP;
+       spf=pass (google.com: domain of nemomacnaught@yahoo.com designates 74.6.130.42 as permitted sender) smtp.mailfrom=nemomacnaught@yahoo.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1573786853; bh=7YKrov2dZCiaFINV8Th6GXvd91gbexnRuY2LyuE1oiI=; h=Date:From:To:Cc:In-Reply-To:References:Subject:From:Subject; b=gAJWK7RPc4MW/ECa9x/febPc+Lp4qn+nizq6BCuri8rofT4hOD+Yh/8r+2Djf2vZzaMvk6G7n+1WkESJ1OeqHieB7B12Vl+CWSesdRgWQGfqnpQQZTbf5oAh/D4kquB0NMWD66fv3xeEDU//3IzJVu5RG+JEAfTwSSWxmZLHMl8CA9lyuF5ltvwRPfZ6k9xi6KSScZ0N6EFWR3uk2Plxk3JaZHPLFsYxUZ8IjLMD8HqiWuvHllf93L1aARw1PO+ylk6ANjoXGXzVY8SoSwy70PRWZGmVkJwJ6CNMm8b5XRUCC+JUiPOyRVRbQzfW7oClET+wfOcRUASwZdKg+n2uBg==
+X-YMail-OSG: fvnykRIVM1lu2Djz907ZDvUfFV.ET_aYGvfGzpidfkIixrrN_ElVJWQ_kbvCNhg
+ KNN4h2iLmOwN6cg8pw6VDOfDGKap.Afwh3sLUU2Yf_TDK9eA5tfpNiIWUy1_V4BcCjTaBjKiS3JA
+ n6wvEmLqCkOoc.xKYGTi1oRhupCFHkQv0h.jIdq6PDDgmWMuyygOzB3e.D90spxzDHFk.IdW2t03
+ QnVcDtxQwLULIniC7h98PdGw1vC0DaSFzm_561fRvOikuuzQae.RZ0qG7O0_y7cUG8fy20aOaTjs
+ l8GoPIVQ4b.C6m0kI.Argbr4rNkeOjsv7ZkQZGi6tsg0jdlR1swY_n3sOjxhYbM3m8HTZzynsIJR
+ h1Z9qZdrGLWgzJWwB6qIHNVm5oeYAklLcFEe_UrKuzUb1EnhxUKe08.xxAHPnSJa67r4woE4pF5V
+ b3e0s0z4ue8s8aL9JgcfTD1mueUttJEaqDr3NLxXzhF5QCNsmxZ9qhHUTO5711mVH3aGok2VIDpz
+ vMSb45p4K7CXF2mPErAr8xCgIjacgDqUh7UFHWrualaD9pzhBf1ncIiWgyLIb11H.9u7Qea1i1Pv
+ iHbql8XzSEfzj0IuBsExgkWR1vCo.6V3CEEKdX5CvDCq244kZfa_GGeREIglWqWXSQHdOiyw1bpv
+ eMdaj4Vx.Y5bhDUim.kr4d8YrD49T0cmmXbt8av.jDqtzwsLZRaEdBFslBfvOx2kh5NiNvjezskB
+ 0DrQRgLEhoUuoKY7nrOpXHY6KT3Nlh.EHijKuWrMEzMbiNDvdg0oYhEQmORS6edLbh1b0K5xzlv7
+ 4CrD5Zf4OKmoHprLYb9Tu3OMroV2Bv_7o8B4GQDwVaNxHlbpvOk9lMHDo2O5AVZ7hsj2LPCqQRhn
+ xzKZQJZFa59__j7VVXDXVvGuwi7pgHqCqHGqbCFCC4C5e3r.zhXiwz9eRi4ttCXXRC6RdWQRNX9f
+ 2bX7mlFofJaDgzkKl2SwHnZa.DF0cfbilJTAuXSAtzEnAgiXhBfatSKQVFXs2ZpNG.55Q0ww.Jhn
+ bqBF9SGfAPWk_KaMT_JS2c119HgOxNHVjQ7x8yQzooUogsxqGXgfU79GrjVZLUyS7dFd5saUazfN
+ FpI1PUQgCh7WApaS.lsp45nMt17ojDivNTnAf41daRT8kT8M3yWuKTX4waMIhTBdFvIIgL8MB_UF
+ hri_QElXiZ9kWSsqeAjUr8.T2BkgjYAQFIkqnlDJ92lGRmfH4lSaLpNfFD2bjRZ0SYoK.CISLbNM
+ .n1vsg3l2KMfY3tnWbDwpeFMtWoIHR8DbJTQz.XNLWOy5U3C.lCAbyM29LYyuiEYHRz9lGzsh1ae
+ gjRL8RtmRoFytAidOXFDBfuiosFP1KFdAw04P2DV4FCe1JL7jbsISukFZQ39Nw9HXGnbAocHHWQs
+ g5B4h3cgVZtYLy.IfKaICuaCzV.mRvOBs
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic308.consmr.mail.bf2.yahoo.com with HTTP; Fri, 15 Nov 2019 03:00:53 +0000
+Received: by smtp423.mail.bf1.yahoo.com (Oath Hermes SMTP Server) with ESMTPA ID d1352db8afcb8e64b0ef148d55d25df1;
+          Fri, 15 Nov 2019 03:00:49 +0000 (UTC)
+Date: Thu, 14 Nov 2019 19:00:21 -0800
+From: Nemo MacNaught <nemomacnaught@yahoo.com>
+To: Nemo MacNaught <nemo.macnaught@outlook.com>, Nemo MacNaught
+ <nemo.macnaught@gmail.com>
+Cc: Nemo MacNaught <nemo.macnaught@mail.ru>
+Message-ID: <514847d7-f4ed-45c9-a7f8-22360910d479@Spark>
+In-Reply-To: <CADpz9gBLgqXyefvj=iWk6T7stGaH=WxUDvt70Nb8+Fg7Dc0nYw@mail.gmail.com>
+References: <1573779328.466488219@f144.i.mail.ru>
+ <CADpz9gABJ2UtfKk9G8ULLfJ-bwXi10bhZKWb1+udgwsyd4FPag@mail.gmail.com>
+ <MN2PR04MB7022A2F3852092DE82FFE12395700@MN2PR04MB7022.namprd04.prod.outlook.com>
+ <1573785764.444192575@f100.i.mail.ru>
+ <MN2PR04MB7022F8812AC975D8B8A7C27095700@MN2PR04MB7022.namprd04.prod.outlook.com>
+ <CADpz9gBLgqXyefvj=iWk6T7stGaH=WxUDvt70Nb8+Fg7Dc0nYw@mail.gmail.com>
+Subject: Re: Re[2]: Re[3]: This subject line is so fancy
+X-Readdle-Message-ID: 514847d7-f4ed-45c9-a7f8-22360910d479@Spark
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="5dce14db_74b0dc51_1c02"
+X-Mailer: WebService/1.1.14728 hermes Apache-HttpAsyncClient/4.1.4 (Java/1.8.0_181)
+Content-Length: 5389
+
+--5dce14db_74b0dc51_1c02
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+Reply from Spark iOS app sent from a yahoo email account.
+On Nov 14, 2019, 18:49 -0800, Nemo MacNaught <nemo.macnaught=40gmail.com>=
+, wrote:
+> If I could keep sand in a bottle, that would be great. Gmail iOS app he=
+re.
+>
+> > On Thu, Nov 14, 2019 at 18:47 Nemo MacNaught <nemo.macnaught=40outloo=
+k.com> wrote:
+> > > This is the outlook.com mobile web client. Not to be confused with =
+the outlook iOS client, which it=E2=80=99s not. It=E2=80=99s still sent f=
+rom my iPhone.
+> > > =46rom: Nemo MacNaught <nemo.macnaught=40mail.ru>
+> > > Sent: Thursday, November 14, 2019 8:42 PM
+> > > To: Nemo MacNaught <nemo.macnaught=40outlook.com>
+> > > Cc: nemomacnaught <nemomacnaught=40yahoo.com>; Nemo MacNaught <nemo=
+.macnaught=40gmail.com>
+> > > Subject: Re=5B2=5D: Re=5B3=5D: This subject line is so fancy
+> > >
+> > > Now is the winter of our discontent.
+> > >
+> > > And this is a second line.
+> > >
+> > > And the third. Prawn Hacao.
+> > >
+> > >
+> > >
+> > > Sent from Mail.ru app for iOS
+> > >
+> > >
+> > > Thursday, November 14, 2019, 18:27 -0800 from nemo.macnaught=40outl=
+ook.com <nemo.macnaught=40outlook.com>:
+> > > > =46irst reply from the outlook iOS client.
+> > > >
+> > > > Get Outlook for iOS
+
+--5dce14db_74b0dc51_1c02
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+<html xmlns=3D=22http://www.w3.org/1999/xhtml=22>
+<head>
+<title></title>
+</head>
+<body>
+<div name=3D=22messageBodySection=22>
+<div dir=3D=22auto=22>Reply from Spark iOS app sent from a yahoo email ac=
+count.</div>
+</div>
+<div name=3D=22messageReplySection=22>On Nov 14, 2019, 18:49 -0800, Nemo =
+MacNaught &lt;nemo.macnaught=40gmail.com&gt;, wrote:<br />
+<blockquote type=3D=22cite=22 class=3D=22spark=5Fquote=22 style=3D=22marg=
+in: 5px 5px; padding-left: 10px; border-left: thin solid =231abc9c;=22>
+<div>
+<div dir=3D=22auto=22>If I could keep sand in a bottle, that would be gre=
+at. Gmail iOS app here.</div>
+</div>
+<div><br />
+<div class=3D=22gmail=5Fquote=22>
+<div dir=3D=22ltr=22 class=3D=22gmail=5Fattr=22>On Thu, Nov 14, 2019 at 1=
+8:47 Nemo MacNaught &lt;<a href=3D=22mailto:nemo.macnaught=40outlook.com=22=
+>nemo.macnaught=40outlook.com</a>&gt; wrote:<br /></div>
+<blockquote class=3D=22gmail=5Fquote spark=5Fquote=22 style=3D=22margin: =
+5px 5px; padding-left: 10px; border-left: thin solid =23e67e22;=22>
+<div>
+<div>This is the <a href=3D=22http://outlook.com=22 target=3D=22=5Fblank=22=
+>outlook.com</a> mobile web client. Not to be confused with the outlook i=
+OS client, which it=E2=80=99s not. It=E2=80=99s still sent from my iPhone=
+.</div>
+<hr style=3D=22display:inline-block;width:98%=22 />
+<div id=3D=22m=5F7687276355721132367divRply=46wdMsg=22 dir=3D=22ltr=22><f=
+ont face=3D=22Calibri, sans-serif=22 style=3D=22font-size:11pt=22 color=3D=
+=22=23000000=22><b>=46rom:</b> Nemo MacNaught &lt;<a href=3D=22mailto:nem=
+o.macnaught=40mail.ru=22 target=3D=22=5Fblank=22>nemo.macnaught=40mail.ru=
+</a>&gt;<br />
+<b>Sent:</b> Thursday, November 14, 2019 8:42 PM<br />
+<b>To:</b> Nemo MacNaught &lt;<a href=3D=22mailto:nemo.macnaught=40outloo=
+k.com=22 target=3D=22=5Fblank=22>nemo.macnaught=40outlook.com</a>&gt;<br =
+/>
+<b>Cc:</b> nemomacnaught &lt;<a href=3D=22mailto:nemomacnaught=40yahoo.co=
+m=22 target=3D=22=5Fblank=22>nemomacnaught=40yahoo.com</a>&gt;; Nemo MacN=
+aught &lt;<a href=3D=22mailto:nemo.macnaught=40gmail.com=22 target=3D=22=5F=
+blank=22>nemo.macnaught=40gmail.com</a>&gt;<br />
+<b>Subject:</b> Re=5B2=5D: Re=5B3=5D: This subject line is so fancy</font=
+>
+<div>&=23160;</div>
+</div>
+</div>
+<div>
+<div>
+<div id=3D=22m=5F7687276355721132367x=5FcomposeWebView=5Feditable=5Fconte=
+nt=22 style=3D=22text-align:left=22>
+<div>Now is the winter of our discontent.</div>
+<div><br /></div>
+<div>And this is a second line.</div>
+<div><br /></div>
+<div>And the third. Prawn Hacao.</div>
+<div><br /></div>
+<div id=3D=22m=5F7687276355721132367x=5Fmail-app-auto-default-signature=22=
+><br />
+<br />
+Sent from Mail.ru app for iOS<br /></div>
+<br />
+<br />
+Thursday, November 14, 2019, 18:27 -0800 from <a href=3D=22mailto:nemo.ma=
+cnaught=40outlook.com=22 target=3D=22=5Fblank=22>nemo.macnaught=40outlook=
+.com</a> &lt;<a href=3D=22mailto:nemo.macnaught=40outlook.com=22 target=3D=
+=22=5Fblank=22>nemo.macnaught=40outlook.com</a>&gt;:<br />
+<div id=3D=22m=5F7687276355721132367x=5FcomposeWebView=5Fpreviouse=5Fcont=
+ent=22>
+<blockquote id=3D=22m=5F7687276355721132367x=5Fmail-app-auto-quote=22 sty=
+le=3D=22margin: 5px 5px; padding-left: 10px; border-left: thin solid =233=
+498db;=22 class=3D=22spark=5Fquote=22>
+<div>
+<div>
+<div id=3D=22m=5F7687276355721132367x=5Fstyle=5F15737848531884163600=5FBO=
+DY=22>
+<div>
+<div dir=3D=22ltr=22>
+<div dir=3D=22ltr=22>
+<div dir=3D=22ltr=22>
+<div dir=3D=22ltr=22>
+<div dir=3D=22ltr=22>
+<div></div>
+<div>
+<div>
+<div style=3D=22direction:ltr=22>=46irst reply from the outlook iOS clien=
+t.</div>
+</div>
+<div><br /></div>
+<div>Get <a href=3D=22https://aka.ms/o0ukef=22 rel=3D=22noopener noreferr=
+er=22 target=3D=22=5Fblank=22>Outlook for iOS</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</blockquote>
+</div>
+</body>
+</html>
+
+--5dce14db_74b0dc51_1c02--
+

@@ -1,0 +1,249 @@
+Delivered-To: nemo.macnaught@gmail.com
+Received: by 2002:a9f:2633:0:0:0:0:0 with SMTP id 48csp10932541uag;
+        Thu, 14 Nov 2019 22:56:36 -0800 (PST)
+X-Google-Smtp-Source: APXvYqw1rijjCNpUAkwcuBdd91cz5v1Z9+7//fZCsyDPUJ2qIQxE/OY1wdQd7+OejDz4o6AnBjwO
+X-Received: by 2002:a5d:88c6:: with SMTP id i6mr1090449iol.251.1573800996876;
+        Thu, 14 Nov 2019 22:56:36 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1573800996; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Mv/Mtku4/LwDTwVnzlMge42qpROIN5VnW1nHY2SuvAxK7bzofkELz9IFMm6I6LJGya
+         RJC068tme2skZuN+VBYYNJWRCc98KMP0bkp1Ep33dOKBmdwW+3AwQL4fpJAXhhZ+oD0n
+         E8+vDtd3TKwRs8e5XzmeyTa1NdRa8Qtqpckiii0/UWZyEYsFzX0t5DJzzhTdoYAMBdJs
+         nzmd0uR3vY9+pbt750/qeV0lKSkpzuppz6+MqS0tetWy+3VRMkvyk53fPxlXA4csY9YZ
+         ztSqny6ZxifySk/0wEBc+5jq8zIIyKEQ5r67wYf4ZLiwo7vSXOYkqDt/LfWOzPfdt4yW
+         IQfQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=references:in-reply-to:date:content-transfer-encoding:subject:cc:to
+         :from:message-id:mime-version:dkim-signature;
+        bh=nAoLHjZQVtPhMVxjr8XwbnNhNggemkShCqFjOVmGEes=;
+        b=wGF532HEwQtM2l2e/AbNxEvwTqtL3qEGo3DXu5bJaDtINLW5uoCZ2rNDlMwG8qQ6Lk
+         KW0jBAz7a9bPpLVR6io92OmZBaH9sypKK01+FkqilFx4vO/+OtrzdZ5PwFVEVJmbC3pE
+         Grz9I77tOzTeULNeCJ64+50ZBaUPRq8/bsAqKyGctU3p2QM/8dsVGj/LPwCILHXjOuhN
+         M/mGWFKGBWB2G0DPpASdVdBFkl1PEMVOuvhXsXCmbEGCDMpDBVk+tsL9pVh5t5Mo6F6x
+         sjZonhll1BuD+3ZsCNQ8/uChNUNNfNw/MTIej/6e/JAGyZaJ2HP4TLt76LR+AnaCY0B6
+         mwZw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mail.com header.s=dbd5af2cbaf7 header.b=0a+gWEc5;
+       spf=pass (google.com: domain of nemo.macnaught@mail.com designates 74.208.4.200 as permitted sender) smtp.mailfrom=nemo.macnaught@mail.com
+Return-Path: <nemo.macnaught@mail.com>
+Received: from mout.gmx.com (mout.gmx.com. [74.208.4.200])
+        by mx.google.com with ESMTPS id l13si3361585ilt.50.2019.11.14.22.56.36
+        for <nemo.macnaught@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 14 Nov 2019 22:56:36 -0800 (PST)
+Received-SPF: pass (google.com: domain of nemo.macnaught@mail.com designates 74.208.4.200 as permitted sender) client-ip=74.208.4.200;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail.com header.s=dbd5af2cbaf7 header.b=0a+gWEc5;
+       spf=pass (google.com: domain of nemo.macnaught@mail.com designates 74.208.4.200 as permitted sender) smtp.mailfrom=nemo.macnaught@mail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=mail.com;
+	s=dbd5af2cbaf7; t=1573800996;
+	bh=nAoLHjZQVtPhMVxjr8XwbnNhNggemkShCqFjOVmGEes=;
+	h=X-UI-Sender-Class:From:To:Cc:Subject:Date:In-Reply-To:References;
+	b=0a+gWEc5SdsE6udhDbHcPZXUVJ+zlRSkq9RR9alg4RUbU2/16MuyX0XIR5yG71Iw7
+	 AfTUEm+ThiTR2KCkW/bSdq42tqvy+JxA0rHZqTLB5eV4sGH3fSqz4qCl1Y3+X3VJWI
+	 3AnVyjYHQjoOndv6WxwBtNY/O27pK72E9LMDw1ZE=
+X-UI-Sender-Class: 214d933f-fd2f-45c7-a636-f5d79ae31a79
+Received: from [157.131.76.77] ([157.131.76.77]) by
+ msvc-mesg-gmxus009.server.lan (via HTTP); Fri, 15 Nov 2019 07:56:35 +0100
+MIME-Version: 1.0
+Message-ID: <trinity-5e3fad83-e0b9-4147-a617-e7c703280d88-1573800995901@msvc-mesg-gmxus009>
+From: "Nemo MacNaught" <nemo.macnaught@mail.com>
+To: "Nemo MacNaught" <nemo.macnaught@gmail.com>
+Cc: nemomacnaught <nemomacnaught@yahoo.com>, "Nemo MacNaught"
+ <nemo.macnaught@mail.ru>, "Nemo MacNaught" <nemo.macnaught@outlook.com>
+Subject: Re: This subject line is so fancy
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Date: Fri, 15 Nov 2019 07:56:35 +0100
+In-Reply-To: <CADpz9gBfSkzkEsMP9LYQb1K2N=fjAgVkB-a2Zf91rNmKOWiGqg@mail.gmail.com>
+References: <35fyh9kido1opwy47kf8ucht.1573798019843.ref@email.android.com>
+ <35fyh9kido1opwy47kf8ucht.1573798019843@email.android.com>
+ <CADpz9gBfSkzkEsMP9LYQb1K2N=fjAgVkB-a2Zf91rNmKOWiGqg@mail.gmail.com>
+X-Provags-ID: V03:K1:3XKYe8JDM9Txw2sxvZXovxtZ6QH+yNvzijEfjX/CLaoJC2kqGYMqpV0686SAK9TTcTNQJ
+ qIfx4CLlfZt6nEcyp4tmtjYpIpoVfqV9wpUdWA/GWHn2u03l9tlmk8yq6Iuc3yQIMNg3e8r9+UBM
+ 5sPL/hygIIfDRKHBmYUGQr8368T4ZXtl+gAvlkNPHTVMJJwnURkrMMtHstzQo35e/xmnkrOUGjD0
+ qKUSVL+be4zHtjkmUTNJzmRYby6bTHoZ/sqkx03vj75bKh+nGn0XuXEGQtj14IjeSFLLdR2Qdkzq
+ RWGhQyeRRq6ayV1gUs9mr53
+X-Spam-Flag: NO
+X-UI-Out-Filterresults: notjunk:1;V03:K0:Yy7MEdoNjZ8=:4MhGP0+HWdEI+McqnG8nTD
+ 5Zt9tePnnZjWFHEnKwbNKP51D2DbZdbJldaFZ8R6DCHR1+buv/epmg5Z12QprIZUJEraGKjU7
+ OB2xSqkClzgViikzh6lwCz8MSoPakgImpMKiWJnHA4NYsNXFewn1xTaQRl+ps4F/541aEaIDa
+ DfYhsyHkNnVgU5w8s2ItIvKgvFNL73+LF+KmL++TQnlPYhNApnM9xo5H5XDGrLzo0YAJ8NBvp
+ tcKzwVsc402O3rrSHxWLBh+ntuNfL3DVs9v5xvfmCsUGS13fJjhFFqoHqei2zi7tc9cxo146V
+ UJABhxvoWvOugCRu2OwZaugNSjbOfMKxmEeSJtyZClQzShCte2nP4qAaI/+fifuSpm4J61cZr
+ d+LxduVjLh41gc4qYnuCq28q9UIeHiMcLhvYoOes+0SNx0Ehxxij0as+kEbma2Z6eH5Na87Q6
+ zfmt33vxQmiuaanWnovAmzEgEr8xVcRexMFZ8Ti/mZSsO16XCrXR0hv9wxY7reGoe3cnVzCFF
+ Zg0AAzG05c/16Sv0WvTI4iaBXqKLiDKtCh68TEjQbNn2rFRsuixER9Sm6pLVrZYN2fBItO3Lj
+ /CS3xTrNLJJ2R/rjvcb3h+eq2utSDU+dhpZ8Y01+z/TwgKzo7IfK4MbkUfziovTNfT7cIYkck
+ zNXuO81g2qth7mUf9T5lF8i+qDLxNK5V0DnY183GejD9SiuCAAAkQ9RvggkjJg8x4AmQiHsDh
+ fdQOIu5bqXuJVSu0SR0vQvWh40BKrKxS4FfOKmLXWcOdcSs0VdzxZrbUsasRA43kT1IfSPKcf
+ IO9E5NG
+
+From the Mail=2Ecom iOS app
+
+Sent using the mail=2Ecom mail app
+
+On 11/14/19 at 22:13, Nemo MacNaught wrote:
+
+> Gmail Android App=2E So lovely=2E
+>=20
+> On Nov 14, 2019 22:09, "nemomacnaught" <nemomacnaught@yahoo=2Ecom> wrote=
+:
+>=20
+> > Here come Samsung Mail on Android to wreck your day!
+> >
+> >
+> >
+> > Sent from my Samsung Galaxy smartphone=2E
+> >
+> > -------- Original message --------
+> > From: Nemo MacNaught <nemo=2Emacnaught@gmail=2Ecom>
+> > Date: 11/14/19 20:05 (GMT-08:00)
+> > To: Nemo MacNaught <nemo=2Emacnaught@mail=2Ecom>
+> > Cc: Nemo MacNaught <nemomacnaught@yahoo=2Ecom>, Nemo MacNaught <
+> > nemo=2Emacnaught@outlook=2Ecom>, Nemo MacNaught <nemo=2Emacnaught@mail=
+=2Eru>
+> > Subject: Re: This subject line is so fancy
+> >
+> > Yikes=2E Mail=2Ecom sucks=2E Let=E2=80=99s get gmail iOS to fix thi me=
+ss=2E
+> >
+> > On Thu, Nov 14, 2019 at 20:01 Nemo MacNaught <nemo=2Emacnaught@mail=2E=
+com>
+> > wrote:
+> >
+> >> Replying from the mail=2Ecom mobile web client=2E Oh boy=2E Look at w=
+hat it=E2=80=99s
+> >> done with the quoting below=2E
+> >>
+> >> > Sent: Friday, November 15, 2019 at 4:57 AM
+> >> > From: "Nemo MacNaught" <nemo=2Emacnaught@gmail=2Ecom>
+> >> > To: "Nemo MacNaught" <nemo=2Emacnaught@outlook=2Ecom>, "
+> >> nemo=2Emacnaught@mail=2Ecom" <nemo=2Emacnaught@mail=2Ecom>
+> >> > Cc: "Nemo MacNaught" <nemomacnaught@yahoo=2Ecom>, "Nemo MacNaught" =
+<
+> >> nemo=2Emacnaught@mail=2Eru>
+> >> > Subject: Re: This subject line is so fancy
+> >> >
+> >> > Adding the mail=2Ecom address from the gmail iOS app=2E
+> >> >
+> >> > On Thu, Nov 14, 2019 at 19:33 Nemo MacNaught <
+> >> nemo=2Emacnaught@outlook=2Ecom>
+> >> > wrote:
+> >> >
+> >> > > Let=E2=80=99s see if the outlook iOS client breaks it=2E
+> >> > >
+> >> > > Get Outlook for iOS <https://aka=2Ems/o0ukef>
+> >> > > ------------------------------
+> >> > > *From:* Nemo MacNaught <nemo=2Emacnaught@gmail=2Ecom>
+> >> > > *Sent:* Thursday, November 14, 2019 7:28:26 PM
+> >> > > *To:* Nemo MacNaught <nemomacnaught@yahoo=2Ecom>
+> >> > > *Cc:* Nemo MacNaught <nemo=2Emacnaught@outlook=2Ecom>; Nemo MacNa=
+ught <
+> >> > > nemo=2Emacnaught@mail=2Eru>
+> >> > > *Subject:* Re: This subject line is so fancy
+> >> > >
+> >> > > That last one was gmail for iOS=2E This one is too=2E
+> >> > >
+> >> > > On Thu, Nov 14, 2019 at 19:27 Nemo MacNaught <
+> >> nemo=2Emacnaught@gmail=2Ecom>
+> >> > > wrote:
+> >> > >
+> >> > > You sure are sneaky=2E
+> >> > >
+> >> > > On Thu, Nov 14, 2019 at 19:22 Nemo MacNaught <nemomacnaught@yahoo=
+=2Ecom
+> >> >
+> >> > > wrote:
+> >> > >
+> >> > > Another reply from the Yahoo! iOS app=2E Bet you weren=E2=80=99t =
+expecting
+> >> that! I=E2=80=99m
+> >> > > out of control over here!
+> >> > >
+> >> > >
+> >> > >
+> >> > > Sent from Yahoo Mail for iPhone
+> >> > > <https://overview=2Email=2Eyahoo=2Ecom/?=2Esrc=3DiOS>
+> >> > >
+> >> > > On Thursday, November 14, 2019, 19:20, Nemo MacNaught <
+> >> > > nemomacnaught@yahoo=2Ecom> wrote:
+> >> > >
+> >> > > A reply from the Yahoo! iOS mail app=2E
+> >> > >
+> >> > >
+> >> > > Sent from Yahoo Mail for iPhone
+> >> > > <https://overview=2Email=2Eyahoo=2Ecom/?=2Esrc=3DiOS>
+> >> > >
+> >> > > On Thursday, November 14, 2019, 19:17, Nemo MacNaught <
+> >> > > nemomacnaught@yahoo=2Ecom> wrote:
+> >> > >
+> >> > > Spark iOS app again=2E This time with a signature
+> >> > >
+> >> > > Nemo MacNaught
+> >> > > On Nov 14, 2019, 19:13 -0800, Nemo MacNaught <
+> >> nemo=2Emacnaught@gmail=2Ecom>,
+> >> > > wrote:
+> >> > >
+> >> > > Gmail iOS App=2E
+> >> > >
+> >> > > On Thu, Nov 14, 2019 at 19:07 Nemo MacNaught <
+> >> nemo=2Emacnaught@gmail=2Ecom>
+> >> > > wrote:
+> >> > >
+> >> > > Gmail mobile site=2E Not the iOS app=2E
+> >> > >
+> >> > > On Thursday, November 14, 2019, Nemo MacNaught <
+> >> nemomacnaught@yahoo=2Ecom>
+> >> > > wrote:
+> >> > >
+> >> > > Reply from Spark iOS app sent from a yahoo email account=2E
+> >> > > On Nov 14, 2019, 18:49 -0800, Nemo MacNaught <
+> >> nemo=2Emacnaught@gmail=2Ecom>,
+> >> > > wrote:
+> >> > >
+> >> > > If I could keep sand in a bottle, that would be great=2E Gmail iO=
+S app
+> >> here=2E
+> >> > >
+> >> > > On Thu, Nov 14, 2019 at 18:47 Nemo MacNaught <
+> >> nemo=2Emacnaught@outlook=2Ecom>
+> >> > > wrote:
+> >> > >
+> >> > > This is the outlook=2Ecom mobile web client=2E Not to be confused=
+ with
+> >> the
+> >> > > outlook iOS client, which it=E2=80=99s not=2E It=E2=80=99s still =
+sent from my iPhone=2E
+> >> > > ------------------------------
+> >> > > *From:* Nemo MacNaught <nemo=2Emacnaught@mail=2Eru>
+> >> > > *Sent:* Thursday, November 14, 2019 8:42 PM
+> >> > > *To:* Nemo MacNaught <nemo=2Emacnaught@outlook=2Ecom>
+> >> > > *Cc:* nemomacnaught <nemomacnaught@yahoo=2Ecom>; Nemo MacNaught <
+> >> > > nemo=2Emacnaught@gmail=2Ecom>
+> >> > > *Subject:* Re[2]: Re[3]: This subject line is so fancy
+> >> > >
+> >> > > Now is the winter of our discontent=2E
+> >> > >
+> >> > > And this is a second line=2E
+> >> > >
+> >> > > And the third=2E Prawn Hacao=2E
+> >> > >
+> >> > >
+> >> > >
+> >> > > Sent from Mail=2Eru app for iOS
+> >> > >
+> >> > >
+> >> > > Thursday, November 14, 2019, 18:27 -0800 from
+> >> nemo=2Emacnaught@outlook=2Ecom <
+> >> > > nemo=2Emacnaught@outlook=2Ecom>:
+> >> > >
+> >> > > First reply from the outlook iOS client=2E
+> >> > >
+> >> > > Get Outlook for iOS <https://aka=2Ems/o0ukef>
+> >> > >
+> >> > >
+> >> >
+> >>
+> >
+

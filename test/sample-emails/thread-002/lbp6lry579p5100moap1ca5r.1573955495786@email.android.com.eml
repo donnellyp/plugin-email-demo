@@ -1,0 +1,102 @@
+Delivered-To: nemo.macnaught@gmail.com
+Received: by 2002:a9f:2633:0:0:0:0:0 with SMTP id 48csp1037615uag;
+        Sat, 16 Nov 2019 17:51:38 -0800 (PST)
+X-Google-Smtp-Source: APXvYqxGN2ejOhaMf8AfOpMMqDSwh5cezB+dXVckA1yLOMNrFUEn7ZwhP4QB5lc/6b6nwwnigMqw
+X-Received: by 2002:ad4:52c8:: with SMTP id p8mr20657458qvs.84.1573955498683;
+        Sat, 16 Nov 2019 17:51:38 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1573955498; cv=none;
+        d=google.com; s=arc-20160816;
+        b=e6IOskpDObvvQUI3Sc2SnHKhGj1BnOTbmrjNw3othtYyJAtM8ffUxt6LNQs9xJoMzD
+         SwOm8kQiyrI8mtt2AwZxrSZDPqfqRscW1qa2ODiZC9B717K7VRZWqwQnLdzPl6QfbSZh
+         zsOpCx7+VGH4p3r1piAmDxcIDEfv2oSfhja9MuyNHvllv6bdg8QON0vHDqn3aq61aQbx
+         tnoo1PtXGJCtffOkQpgGaOH3wfRnV9cz6j+hB1uZdOh9WQDkMvr0PA3RsLz7+pnCTyEi
+         r4a5+Hr4YJMbKGqdvE6TNA5PpKQKTunIE3y+kG9Odhv1e71m50Z2/s8S5WzbjWgv3uX3
+         2bGA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=references:mime-version:cc:to:from:importance:message-id:subject
+         :date:dkim-signature;
+        bh=RiNHHAkUx+FoZ9h8KEyLVri9f8smQ3yWQPXJVyVXz7E=;
+        b=eBbXVuAYG4fJ1z5OSiEcne+iQSe+TVtcDm1w2FKhRGcE3btCD1yoWorPc1mqkxisI1
+         v5D2k9m9zCXC3WGaorctWYX69uZFvyJoQiBnAf0ZWv/Df3nKo49HymTcLAyFnmTI7Lqb
+         he/JmugmVJyoqn+w1CyZlg4FYDSvH0By0hMe7I2Ok3cIwnMefG8CczRux04ostXuYdjg
+         RhZ09E6k3QJTbxINZsi8MKQ5WH+8CnHUtwCW+65ih1mO2fhfxdp+vk6orYaaj3e/ogx8
+         Nht9HlTMn2A/qKUZj5UXmvQPAQEEPdws2dkvpgVkeojzD/Pqcu1IeRcWCMTNQ2XoFcvD
+         xpvA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=ApBIZl+r;
+       spf=pass (google.com: domain of nemomacnaught@yahoo.com designates 74.6.130.42 as permitted sender) smtp.mailfrom=nemomacnaught@yahoo.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+Return-Path: <nemomacnaught@yahoo.com>
+Received: from sonic308-3.consmr.mail.bf2.yahoo.com (sonic308-3.consmr.mail.bf2.yahoo.com. [74.6.130.42])
+        by mx.google.com with ESMTPS id m132si9048782qke.96.2019.11.16.17.51.38
+        for <nemo.macnaught@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 16 Nov 2019 17:51:38 -0800 (PST)
+Received-SPF: pass (google.com: domain of nemomacnaught@yahoo.com designates 74.6.130.42 as permitted sender) client-ip=74.6.130.42;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=ApBIZl+r;
+       spf=pass (google.com: domain of nemomacnaught@yahoo.com designates 74.6.130.42 as permitted sender) smtp.mailfrom=nemomacnaught@yahoo.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1573955498; bh=RiNHHAkUx+FoZ9h8KEyLVri9f8smQ3yWQPXJVyVXz7E=; h=Date:Subject:From:To:Cc:References:From:Subject; b=ApBIZl+r32WGBCcA2i3JsAnOd7B7kHTIvXmvYmDLoAJXcUFRKLL3w6+GJVdqF+VCvJ/D36pFJV6eJM40fVfsVtM6Q0rptUM6vK2S9JlJ1ZuBu3F3AVl0PcWkna/a2qnxUtbCzBhYS2jG60Hdc0jQOwjNjkc/j+6EOq/08gxUfeTbaPTBTzQX3MZ+gux5bOJKlQ3TNSCZ1Rs3elh8wSoIad37ks5ZA8CBHzryG/kXSQrCPYOUPAU12+HZRXoeNAChshk9clVTjjpH/3PwT1v9fgVDkscrwAFChEWx1O71meSku8FuWJ8qahWNxtD7YqX6g2I/+yYSImRQrusor/T1SA==
+X-YMail-OSG: UoA5FdIVM1mW24Q5JZtqBlp9IMAVNqI89qVb5RgPQ3E.4onWB_.NvyaZr0dtsmq
+ KCN2Bx24uvfN9BQzYQCqTTiN3NyFaziYsOZaf.ZC2wFDLUDoWjMHdY7EMwyyG5RCEX2ASkFaK9Po
+ wDGc5TlEaexPI26FF58dX9G00KEPxOoeYyVE_jTJZ_U6h0LVV_4VttjNCRZuymtwtEt1_saejHET
+ aZph_UHQNHooLnbQUt8yZo4EmTRwuJzCk3RzZoNLjRYEDGrT3rDKBg7wUTY702a4GdUM37ZP7bmC
+ GK2Lh4fxGbwoQiERb_X3K9vNSP_Tkd9gU4XDoJhUGATVcEMQ5WsqrvMtE54o27SjRYcUtwC6e4c0
+ .QuZFhpHdhT3n6SIDz.QGIsqMynEFg3DTK_K_NQhKFOCrFM1q_wONITbNyTINdty4jeCofLYw05G
+ ROKKPhpUHhYFN0xdnk3fcMFaNVva8dou1DQpmxlkRkg9uafGez150sF6LNV4NeW3ODpDbvkG44PZ
+ SE8HwUP6jo8g0iB6dUtpOTA7TSyNFyHgRSYl9F9ZnlqGlB_mejeivINe8KADp75_TiAN5jn3gvO1
+ he02hPl_hWOJto4IAcxMwVZe8utIFlE8UOigOdEVqTnVU0jzpJVgr_nSASP12UGtA89AXf55_CL8
+ kS6y3YMUGkrz06ndzaMrjannU41yMvT9JCKVFb2ZsJiV.UXyT1eCkdnY1.1kCJ_t2PV.09pN8Yid
+ e53Cs9mMsDRaYDWFPAbWMuZtUBOsECU1ZfTDsUNKoGBIT3kyhtEY.USgsMW3OjcXnEag0JYZcKZn
+ U0g1zBG076NoZRWjJnnf9dksHt8VVjh.yQ7H5fNcXjXmLoW2RZxNm8jTIYDkuHYAQbE1X3.wHFmd
+ dFy89RCLJ.duj4ma3lnQJDF5KrDVj9kfpKTqQLHy9sP9CzC3tAuq0RZgptQqZpKJLeaC74ySsmRS
+ PMCgyYSYcRtgoxhbO0hKmP3xYYpOKEti0PWQFUFBYk7p4Y5YXXz1TlI3A0KrH9H4Hr6CxCyc2ZoQ
+ CDwcbbHA57uexeuN.yD4NYRwlLAN8yzyUP2omuZ7NFoQGssSNx2x38o6LDphAbRII4JeEC9G7xfL
+ zR03SUQhLoWuyNZY9hcbAVpIlU1WfO.raDNz8GaWi6muAKE24DK8tkwt.z19xjCWxuNkBhtKWGua
+ fnQ.d_zQ3DhyXS7XXZZUXfp7ked15Rt_nt_HKf3yy7I5E9OIQDGnW_DGzhIrqSv7lzEXOlWoSFA9
+ C9sQSsB4q8_FiZHHUVPhCjQAcaFmO92lBc7NXp1Tol2T6LnOAdDNXaTeJcFq4jfixDaYXDS09WgX
+ 6Qrl1clYy4Ya789VVbUTIQRCj.xX90aSlRr5S9nxTMDuRJSPTXnAlkROTS4s4iiZa0XA-
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic308.consmr.mail.bf2.yahoo.com with HTTP; Sun, 17 Nov 2019 01:51:38 +0000
+Received: by smtp406.mail.ne1.yahoo.com (Oath Hermes SMTP Server) with ESMTPA ID 56b8e48e4279ec1da092547caca9a493;
+          Sun, 17 Nov 2019 01:51:36 +0000 (UTC)
+Date: Sat, 16 Nov 2019 17:51:35 -0800
+Subject: Thread: 002, more of the same
+Message-ID: <lbp6lry579p5100moap1ca5r.1573955495786@email.android.com>
+Importance: normal
+From: nemomacnaught <nemomacnaught@yahoo.com>
+To: nemo.macnaught@gmail.com
+Cc: nemomacnaught@aol.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="--_com.samsung.android.email_507987223297800"
+References: <lbp6lry579p5100moap1ca5r.1573955495786.ref@email.android.com>
+X-Mailer: WebService/1.1.14728 hermes Apache-HttpAsyncClient/4.1.4 (Java/1.8.0_181)
+Content-Length: 1334
+
+----_com.samsung.android.email_507987223297800
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+QW5vdGhlciBzaW1wbGUgdGVzdCBmcm9tIFNhbXN1bmcgRW1haWwgZm9yIEFuZHJvaWQuwqBCdXQg
+bXVsdGlwbGUgcGFyYWdyYXBocy7CoEZvcm1hdHRlZCB0ZXh0LsKgRW1vamk68J+NjfCfjY3wn5iF
+8J+NjfCfjY3jgZ3jgZfjgabjgIHml6XmnKzoqp7jgoLjgYLjgovjgIJTZW50IGZyb20gbXkgU2Ft
+c3VuZyBHYWxheHkgc21hcnRwaG9uZS4=
+
+----_com.samsung.android.email_507987223297800
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+PGh0bWw+PGhlYWQ+PG1ldGEgaHR0cC1lcXVpdj0iQ29udGVudC1UeXBlIiBjb250ZW50PSJ0ZXh0
+L2h0bWw7IGNoYXJzZXQ9VVRGLTgiPjwvaGVhZD48Ym9keT48ZGl2PkFub3RoZXIgc2ltcGxlIHRl
+c3QgZnJvbSBTYW1zdW5nIEVtYWlsIGZvciBBbmRyb2lkLiZuYnNwOzwvZGl2PjxkaXY+PGJyPjwv
+ZGl2PjxkaXY+QnV0IG11bHRpcGxlIHBhcmFncmFwaHMuJm5ic3A7PC9kaXY+PGRpdj48YnI+PC9k
+aXY+PGRpdj48dT5Gb3JtYXR0ZWQ8L3U+IHRleHQuJm5ic3A7PC9kaXY+PGRpdj48YnI+PC9kaXY+
+PGRpdj5FbW9qaTrwn42N8J+NjfCfmIXwn42N8J+NjTwvZGl2PjxkaXY+PGJyPjwvZGl2PjxkaXY+
+44Gd44GX44Gm44CB5pel5pys6Kqe44KC44GC44KL44CCPC9kaXY+PGRpdj48YnI+PC9kaXY+PGRp
+dj48YnI+PC9kaXY+PGRpdj48YnI+PC9kaXY+PGRpdiBpZD0iY29tcG9zZXJfc2lnbmF0dXJlIj48
+ZGl2IHN0eWxlPSJmb250LXNpemU6ODUlO2NvbG9yOiM1NzU3NTciIGRpcj0iYXV0byI+U2VudCBm
+cm9tIG15IFNhbXN1bmcgR2FsYXh5IHNtYXJ0cGhvbmUuPC9kaXY+PC9kaXY+PC9ib2R5PjwvaHRt
+bD4=
+
+----_com.samsung.android.email_507987223297800--
+

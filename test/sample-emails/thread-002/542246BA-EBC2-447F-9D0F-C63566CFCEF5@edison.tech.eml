@@ -1,0 +1,938 @@
+Delivered-To: nemo.macnaught@gmail.com
+Received: by 2002:a9f:2633:0:0:0:0:0 with SMTP id 48csp1753324uag;
+        Sun, 17 Nov 2019 11:18:06 -0800 (PST)
+X-Google-Smtp-Source: APXvYqx/2+xBN6bS7OboC/D8nGh1CoByI6Vq9WexE18iDFAfceoCmSD+m734zIu6zr3mUvu6+Mec
+X-Received: by 2002:a0c:e90b:: with SMTP id a11mr22485119qvo.229.1574018285980;
+        Sun, 17 Nov 2019 11:18:05 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1574018285; cv=none;
+        d=google.com; s=arc-20160816;
+        b=tq0frXeuC/65GsegX1BXROL1i2753xi0r/W9cu1FEPXhQr+Q9FqhsV7f24bm1gg5Vd
+         zIQw5/YqIWY90KoRnxTJYAmnrH8i/5+i//H6KlVWMo5UI++3MmmHK74nVsGS9GYjVu3B
+         wVn16EswRLMHjlIWwbkIsoszAvtqUzN12vum1qhw1Sx3ULyRSiNc8si8uLp+n6c3U9jN
+         WSlf3UDR+EgRyDwQcZ6lkyJUImdWn1Y+Av1XH9E3N2Pn1HLEyT4qAN7/Len4XVxSfVYh
+         gdvDMi1ypOFpVtXIMMpDwpbQJiY5KcpufsNeHxEeamdw0J+jUyv6FlID6FsQtuZOOwPJ
+         t/Yw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=references:mime-version:subject:in-reply-to:message-id:cc:to:from
+         :date:dkim-signature;
+        bh=UNU0K0D2AX5XtQhK30HYYAYK1sJRzp9+LLizGIOKU5k=;
+        b=xORxWSH2BiyoMGitcQX73ZbfzmaQ5oGKOGjQJlW5V5KKTb0GHf6ibZr5ItWrmuzn5/
+         UV/LBoQlsn+Kpp7aTOQ2rx8e3JwUzkySlae3u+GlcJbK1QR+cBasQgeApxulLPOvyap/
+         tAPIVTRbmSAbYIv6Gpaa8A8Gcu87rP3BE4i1LYCtCgoPczGhYMMWQaTJ3y39jAMqqsNu
+         smumhiJAnxww9F3Ewu5z8cshOKUIK6Eo/XNWgKjdHWFSklzzFLIiGL/cgaYNBhStYiKi
+         omXYE4swpEQ2KvrYMdstaKAZL4YO182hVb1iyaIkB7Dum9a1KbrEaQ5pCfcgX/QuND5d
+         56eQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=AL1Mgevk;
+       spf=pass (google.com: domain of nemomacnaught@yahoo.com designates 74.6.128.83 as permitted sender) smtp.mailfrom=nemomacnaught@yahoo.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+Return-Path: <nemomacnaught@yahoo.com>
+Received: from sonic312-21.consmr.mail.bf2.yahoo.com (sonic312-21.consmr.mail.bf2.yahoo.com. [74.6.128.83])
+        by mx.google.com with ESMTPS id r35si10195544qta.108.2019.11.17.11.18.05
+        for <nemo.macnaught@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 17 Nov 2019 11:18:05 -0800 (PST)
+Received-SPF: pass (google.com: domain of nemomacnaught@yahoo.com designates 74.6.128.83 as permitted sender) client-ip=74.6.128.83;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=AL1Mgevk;
+       spf=pass (google.com: domain of nemomacnaught@yahoo.com designates 74.6.128.83 as permitted sender) smtp.mailfrom=nemomacnaught@yahoo.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1574018285; bh=UNU0K0D2AX5XtQhK30HYYAYK1sJRzp9+LLizGIOKU5k=; h=Date:From:To:Cc:In-Reply-To:Subject:References:From:Subject; b=AL1MgevkPJRlVh/JzWQ8xeK9oUfz5oX40qQleWgRmt8VnX/EZmvx+mYjeVJVFXMKvL9WnS1hy9a7n2Sso4B30B1zLW9aiFMjQHOd1lDzuhYHoYnYHspOii6BU2QZqnqpKNcdCs83zafqzMq1vmnJWhHSs2aEADOfS6fXMI9x87nTFBTlGF1n3JIQ+hxf50Jf6ya6njTLrNWqgEUzvpTlGoFqAF3IiM/HFYFOSEvXfo34yg2s1V7CJfH8LV8kdcA21HnDNxG4PoOiVe3ZTrhmmS942Y3ojWucoumi4fyRarM91JXkJhQCU8C2xIrSDJgD8V5oLBI9In96qHyyKwa7Ew==
+X-YMail-OSG: .5eB2DMVM1mWpyQQ1xC.QNuR3Xox.fb0LTcXoqIslUB5lQc.fkE48HQhknsyNQC
+ SW2m5k6cO7P4vb2z85VEQuFMrlH8Z8H5OErP_C6wwn4PNqj4syfPZm40i1eENz5rfK5u426H7EF2
+ iWGT2S9ZvZyLWb8Ttj87_Kgzgg1yfPJAu.XXcKh8USrV30C1rYypPJDhcBpLbu3EAFZwmmov0UZm
+ EbTkAb7HSxqr9_xU.cRCkHygqX1w.nO_duRkL97U72c1jxa.jzSVzqp_V0CNpb2VjtDaJRZ_3wL1
+ Yy6u_5dnUNHUt8uBjwkE5ek8cDdSx.vmxtQETaK_Ocai3_sV8NHF8.U53XQGZKu4_2H6KFJucjWp
+ lnn.8Ki_VrPkXJtcYiLsvlcBwHYjnZ1Na5G30rfx8hoCfVpxDbNwuATOYfIx.3wEWdM7HulwgQA3
+ hyjmdgJ9QPfBx6jufPR4EjCobLl.puqDKjzEXdvPaeMBPVQTmDFfzrF7N.kz5k8pql0oNr9E28W3
+ cdU1GwnJIx3QzDIhkyEYwB5_hfamR.hnBZ1okrDOJTlL7UwCGJf8D1bS2DV5sahuSSqFN0wo7XV9
+ KvGryjTIRV9RgtzxbhlnDSUs.XVtY3S3jwmQPucUAP9DmHKIHN.2d55aWGbIsetb4UIbrLLmwn0E
+ RBg11i3JFxVeu9lmePiD13voEY2h_INW8ITj81eISnh_Q7cRUAIl3paTofWQwAgO.7xLqV7pyhDk
+ Q26P9E.1SQpyeMtO3ADQzLnIaIVr8DLFVbyGTaggmGWjX4eeyf._.u4._rnP1dTqijjjaNzL6dQo
+ 6Dd6CS1OqDP60zrxqDutx.M9DHVDD8zVuRROtEspOwdw0MYQF.6CIa8HkY3i.3WPaFcda57.tu5S
+ EilL_KyxEwJ00fFdKy1sZaYfvExmvPHmNg1gB02AeDjlTaKsXPdy1kSrtoUTQgAT.vnS9Ov4HRpx
+ nOCIl4bdOP2JXzAaFa1w6ZnVv8vP76mJMmP9vuA73Yp0XuwRQ2eV6Jfrk4lvzrU4I_BrTTR_jufq
+ 2YHd_i0a5mRI2p143DDtO2Ey69s74rcw3t0436Djh.dSsbuklLlXPf6yED3KjBKjvMAEDU.BtmzT
+ 4_tOtZ05SKCmrLKafGJ80GZPTmVf5LZRF_7TyWMYEh7PO9i1izQi6pY_zT2prsPpikBddMx.QRz4
+ Jf_mMKtGAAGNRGki.d1TXkvZjRr4oJTPGqm.geg0rQgHyFAfwgX_1PiuHmr9ta2L8QoRc9MOFkKE
+ QUXMZ3so9t77OYjbDXEzIHW57UCxmPM64jaF0_XAVKHDJkqI6zqhchVxRLAJIc3YD1bngaUDI54G
+ A5mweB1inAXjUBFcOsqZvHZZiRF1V0L5huzKhLf9Unde8HQb.gKSNzG7t84CjAJgTBtU5ELzVXQM
+ zpI2X
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic312.consmr.mail.bf2.yahoo.com with HTTP; Sun, 17 Nov 2019 19:18:05 +0000
+Received: by smtp420.mail.ne1.yahoo.com (Oath Hermes SMTP Server) with ESMTPA ID c52ffd72968eb5f9db036451b2afda6c;
+          Sun, 17 Nov 2019 19:18:02 +0000 (UTC)
+Date: Sun, 17 Nov 2019 11:18:00 -0800
+From: Nemo MacNaught <nemomacnaught@yahoo.com>
+To: Tamarind Pony <tamarind.pony@tutanota.com>
+Cc: Nemo MacNaught <nemomacnaught@zohomail.com>, Nemo Macnaught
+ <nemo.macnaught@outlook.com>, Nemo MacNaught
+ <nemo.macnaught@gmail.com>, Nemo MacNaught <nemomacnaught@aol.com>, 
+ Nemo MacNaught <nemo.macnaught@mail.com>, Nemo MacNaught
+ <nemo.macnaught@mail.ru>
+Message-ID: <542246BA-EBC2-447F-9D0F-C63566CFCEF5@edison.tech>
+In-Reply-To: <Ltuki3X--7-1@tutanota.com>
+Subject: Re: Thread: 002, more of the same
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="5dd19ce8_6b8b4567_2508"
+References: <542246BA-EBC2-447F-9D0F-C63566CFCEF5.ref@edison.tech>
+X-Mailer: WebService/1.1.14728 hermes Apache-HttpAsyncClient/4.1.4 (Java/1.8.0_181)
+Content-Length: 36295
+
+--5dd19ce8_6b8b4567_2508
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+     =20
+ =20
+
+ Edison Mail iOS.
+ =20
+
+ =20
+=46ormatting    is just b u i.
+ =20
+
+ =20
+Inline images. Attachments. =20
+
+ =20
+ =20
+
+ =20
+ =20
+
+ =20
+ =20
+>  =20
+> On Nov 17, 2019 at 11:07,  <Tamarind Pony (mailto:tamarind.pony=40tutan=
+ota.com)>  wrote:
+>  =20
+>  =20
+>    =20
+>
+>  =20
+> Tutanota Android
+>  =20
+>
+>  =20
+> Same features as Tutanota iOS.  =20
+>  =20
+> --
+>  =20
+> Securely sent with Tutanota. Get your own encrypted, ad-free mailbox:
+>  =20
+>  https://tutanota.com
+>  =20
+>
+>  =20
+>
+>  =20
+> Nov 17, 2019, 10:35 by nemomacnaught=40zohomail.com:
+>  =20
+> >  =20
+> >  =20
+> >  =20
+> > Zoho Mail iOS
+> >  =20
+> >
+> >  =20
+> > Attachments. No inline images.
+> >  =20
+> >
+> >  =20
+> > =46ormatting=3F Just b u i.
+> >  =20
+> >
+> >  =20
+> >
+> >  =20
+> >  =20
+> > Sent from Zoho Mail on iPhone
+> >      =20
+> >  =20
+> >
+> >    =20
+> > ---- On Sun, 17 Nov 2019 10:29:31 -0800 nemo.macnaught=40outlook.com<=
+nemo.macnaught=40outlook.com>  wrote ----
+> >  =20
+> >
+> >  =20
+> > >  =20
+> > >  =20
+> > >  =20
+> > >
+> > >  =20
+> > >  =20
+> > >  =20
+> > >
+> > >    =20
+> > > Outlook iOS
+> > >  =20
+> > >
+> > >  =20
+> > > Adding Zoho Mail address
+> > >  =20
+> > >
+> > >  =20
+> > >
+> > >  =20
+> > > Get  Outlook for iOS (https://aka.ms/o0ukef)
+> > >      =20
+> > >    =20
+> > >  =20
+> > >  =20
+> > > =46rom:   tamarind.pony=40tutanota.com (mailto:tamarind.pony=40tuta=
+nota.com)   <tamarind.pony=40tutanota.com (mailto:tamarind.pony=40tutanot=
+a.com)>
+> > >   Sent:  Sunday, November 17, 2019 9:59:27 AM
+> > >   To:  Nemo MacNaught  <nemomacnaught=40yahoo.com (mailto:nemomacna=
+ught=40yahoo.com)>
+> > >   Cc:  Nemo MacNaught  <nemo.macnaught=40gmail.com (mailto:nemo.mac=
+naught=40gmail.com)>; Nemo MacNaught  <nemomacnaught=40aol.com (mailto:ne=
+momacnaught=40aol.com)>; Nemo MacNaught  <nemo.macnaught=40mail.com (mail=
+to:nemo.macnaught=40mail.com)>; Nemo MacNaught  <nemo.macnaught=40mail.ru=
+ (mailto:nemo.macnaught=40mail.ru)>;  nemo.macnaught=40outlook.com (mailt=
+o:nemo.macnaught=40outlook.com)   <nemo.macnaught=40outlook.com (mailto:n=
+emo.macnaught=40outlook.com)>
+> > >   Subject:  Re: Thread: 002, more of the same  =20
+> > >  =20
+> > >    =20
+> > >  =20
+> > > Tutanota iOS
+> > >  =20
+> > >
+> > >  =20
+> > > exactly like mobile browser, but no inline images  =20
+> > >  =20
+> > >
+> > >  =20
+> > > --
+> > >  =20
+> > > Securely sent with Tutanota. Get your own encrypted, ad-free mailbo=
+x:
+> > >  =20
+> > > https://tutanota.com
+> > >  =20
+> > >
+> > >  =20
+> > >
+> > >  =20
+> > > Nov 17, 2019, 09:55 by  tamarind.pony=40tutanota.com (mailto:tamari=
+nd.pony=40tutanota.com):
+> > >  =20
+> > > >  =20
+> > > > Tutanota Mobile Browser
+> > > >  =20
+> > > >  =20
+> > > > Billeted Lists
+> > > >    =20
+> > > >  =20
+> > > > numbered lists
+> > > >    =20
+> > > > bold
+> > > >  =20
+> > > > underline
+> > > >  =20
+> > > > italic
+> > > >  =20
+> > > >
+> > > >  =20
+> > > > code
+> > > >  =20
+> > > >
+> > > >  =20
+> > > > links (https://Https://Wikipedia.com)
+> > > >  =20
+> > > >
+> > > >  =20
+> > > > font sizes but not typefaces
+> > > >  =20
+> > > >
+> > > >  =20
+> > > > left, right, center alignment and justification
+> > > >  =20
+> > > >
+> > > >  =20
+> > > > inline images, regular attachments
+> > > >  =20
+> > > >
+> > > >  =20
+> > > > no blockquotes  =20
+> > > >  =20
+> > > > --
+> > > >  =20
+> > > > Securely sent with Tutanota. Get your own encrypted, ad-free mail=
+box:
+> > > >  =20
+> > > > https://tutanota.com
+> > > >  =20
+> > > >
+> > > >  =20
+> > > >
+> > > >  =20
+> > > > Nov 17, 2019, 09:48 by  nemomacnaught=40yahoo.com (mailto:nemomac=
+naught=40yahoo.com):
+> > > >  =20
+> > > > >  =20
+> > > > >  =20
+> > > > > Spark iOS
+> > > > >  =20
+> > > > >
+> > > > >  =20
+> > > > > Multiple paragraphs
+> > > > >    =20
+> > > > >  =20
+> > > > >
+> > > > >  =20
+> > > > > Nemo MacNaught
+> > > > >    =20
+> > > > >  =20
+> > > > > On Nov 16, 2019, 21:58 -0800, Nemo MacNaught  <nemomacnaught=40=
+aol.com (mailto:nemomacnaught=40aol.com)>, wrote:
+> > > > >  =20
+> > > > >
+> > > > >  =20
+> > > > > >  =20
+> > > > > > On 11/16/19 9:41 PM, Nemo MacNaught wrote:
+> > > > > >  =20
+> > > > > > >  =20
+> > > > > > >  =20
+> > > > > > > Changed Gmail Desktop Browser's language to Japanese.
+> > > > > > >  =20
+> > > > > > >
+> > > > > > >  =20
+> > > > > > > =E7=AC=91
+> > > > > > >    =20
+> > > > > > >
+> > > > > > >  =20
+> > > > > > >  =20
+> > > > > > > 2019=E5=B9=B411=E6=9C=8816=E6=97=A5(=E5=9C=9F) 21:24 Nemo M=
+acNaught  <nemo.macnaught=40gmail.com (mailto:nemo.macnaught=40gmail.com)=
+>:
+> > > > > > >  =20
+> > > > > > > >  =20
+> > > > > > > >  =20
+> > > > > > > > Gmail iOS App.
+> > > > > > > >    =20
+> > > > > > > >
+> > > > > > > >  =20
+> > > > > > > >
+> > > > > > > >  =20
+> > > > > > > >  =20
+> > > > > > > >  =20
+> > > > > > > > On Sat, Nov 16, 2019 at 20:45 Nemo MacNaught  <nemo.macna=
+ught=40gmail.com (mailto:nemo.macnaught=40gmail.com)>  wrote:
+> > > > > > > >  =20
+> > > > > > > > >  =20
+> > > > > > > > > Gmail desktop basic html browser
+> > > > > > > > >  =20
+> > > > > > > > >
+> > > > > > > > >  =20
+> > > > > > > > > In case you needed to remember what the first version o=
+f gmail looked like...
+> > > > > > > > >  =20
+> > > > > > > > >
+> > > > > > > > >  =20
+> > > > > > > > > On 11/16/19, Nemo MacNaught  <nemo.macnaught=40gmail.co=
+m (mailto:nemo.macnaught=40gmail.com)>  wrote:
+> > > > > > > > >  =20
+> > > > > > > > > >  Gmail mobile Browser
+> > > > > > > > >  =20
+> > > > > > > > > >
+> > > > > > > > >  =20
+> > > > > > > > > >  The Gmail email client that can=E2=80=99t do anythin=
+g but attachments.
+> > > > > > > > >  =20
+> > > > > > > > > >
+> > > > > > > > >  =20
+> > > > > > > > > >  On Saturday, November 16, 2019, Nemo MacNaught  <nem=
+omacnaught=40yahoo.com (mailto:nemomacnaught=40yahoo.com)>
+> > > > > > > > >  =20
+> > > > > > > > > >  wrote:
+> > > > > > > > >  =20
+> > > > > > > > > >
+> > > > > > > > >  =20
+> > > > > > > > > >>  Yahoo iOS App
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  *Basic* formatting.
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  Nemo MacNaught
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  On Saturday, November 16, 2019, 18:37, Nemo MacNaug=
+ht  <
+> > > > > > > > >  =20
+> > > > > > > > > >>   nemo.macnaught=40gmail.com (mailto:nemo.macnaught=40=
+gmail.com)>  wrote:
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  Outlook Android App
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  No formatting.
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  Nemo McNaught
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  ------------------------------
+> > > > > > > > >  =20
+> > > > > > > > > >>  *=46rom:* Nemo MacNaught  <nemo.macnaught=40gmail.c=
+om (mailto:nemo.macnaught=40gmail.com)>
+> > > > > > > > >  =20
+> > > > > > > > > >>  *Sent:* Saturday, November 16, 2019 6:35:29 PM
+> > > > > > > > >  =20
+> > > > > > > > > >>  *To:*  nemomacnaught=40yahoo.com (mailto:nemomacnau=
+ght=40yahoo.com)   <nemomacnaught=40yahoo.com (mailto:nemomacnaught=40yah=
+oo.com)>; Nemo MacNaught  <
+> > > > > > > > >  =20
+> > > > > > > > > >>   nemomacnaught=40aol.com (mailto:nemomacnaught=40ao=
+l.com)>
+> > > > > > > > >  =20
+> > > > > > > > > >>  *Cc:* Nemo MacNaught  <nemo.macnaught=40mail.ru (ma=
+ilto:nemo.macnaught=40mail.ru)>;  nemo.macnaught=40outlook.com (mailto:ne=
+mo.macnaught=40outlook.com)
+> > > > > > > > >  =20
+> > > > > > > > > >>   <nemo.macnaught=40outlook.com (mailto:nemo.macnaug=
+ht=40outlook.com)>; Nemo MacNaught  <nemo.macnaught=40mail.com (mailto:ne=
+mo.macnaught=40mail.com)>
+> > > > > > > > >  =20
+> > > > > > > > > >>  *Subject:* Re: Thread: 002, more of the same
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  Wikipedia  <https://wikipedia.org>
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  Nemo McNaught
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  ------------------------------
+> > > > > > > > >  =20
+> > > > > > > > > >>  *=46rom:* Nemo MacNaught  <nemo.macnaught=40gmail.c=
+om (mailto:nemo.macnaught=40gmail.com)>
+> > > > > > > > >  =20
+> > > > > > > > > >>  *Sent:* Saturday, November 16, 2019, 18:32
+> > > > > > > > >  =20
+> > > > > > > > > >>  *To:*  nemomacnaught=40yahoo.com (mailto:nemomacnau=
+ght=40yahoo.com); Nemo MacNaught
+> > > > > > > > >  =20
+> > > > > > > > > >>  *Cc:*  nemo.macnaught=40mail.ru (mailto:nemo.macnau=
+ght=40mail.ru);  nemo.macnaught=40outlook.com (mailto:nemo.macnaught=40ou=
+tlook.com);
+> > > > > > > > >  =20
+> > > > > > > > > >>   nemo.macnaught=40mail.com (mailto:nemo.macnaught=40=
+mail.com)
+> > > > > > > > >  =20
+> > > > > > > > > >>  *Subject:* Re: Thread: 002, more of the same
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  Outlook Android App
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  Nibble, nibble.
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  Get Outlook for Android  <https://aka.ms/ghei36>
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  ------------------------------
+> > > > > > > > >  =20
+> > > > > > > > > >>  *=46rom:* Nemo MacNaught  <nemomacnaught=40aol.com =
+(mailto:nemomacnaught=40aol.com)>
+> > > > > > > > >  =20
+> > > > > > > > > >>  *Sent:* Saturday, November 16, 2019 6:15:54 PM
+> > > > > > > > >  =20
+> > > > > > > > > >>  *To:*  nemomacnaught=40yahoo.com (mailto:nemomacnau=
+ght=40yahoo.com)   <nemomacnaught=40yahoo.com (mailto:nemomacnaught=40yah=
+oo.com)>;
+> > > > > > > > >  =20
+> > > > > > > > > >>   nemo.macnaught=40gmail.com (mailto:nemo.macnaught=40=
+gmail.com)   <nemo.macnaught=40gmail.com (mailto:nemo.macnaught=40gmail.c=
+om)>
+> > > > > > > > >  =20
+> > > > > > > > > >>  *Cc:*  nemo.macnaught=40mail.ru (mailto:nemo.macnau=
+ght=40mail.ru)   <nemo.macnaught=40mail.ru (mailto:nemo.macnaught=40mail.=
+ru)>;
+> > > > > > > > >  =20
+> > > > > > > > > >>   nemo.macnaught=40outlook.com (mailto:nemo.macnaugh=
+t=40outlook.com)   <nemo.macnaught=40outlook.com (mailto:nemo.macnaught=40=
+outlook.com)>;
+> > > > > > > > >  =20
+> > > > > > > > > >>   nemo.macnaught=40mail.com (mailto:nemo.macnaught=40=
+mail.com)   <nemo.macnaught=40mail.com (mailto:nemo.macnaught=40mail.com)=
+>
+> > > > > > > > >  =20
+> > > > > > > > > >>  *Subject:* Re: Thread: 002, more of the same
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  AOL Desktop Browser
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  Many formatting options.
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  -----Original Message-----
+> > > > > > > > >  =20
+> > > > > > > > > >>  =46rom: Nemo MacNaught  <nemomacnaught=40aol.com (m=
+ailto:nemomacnaught=40aol.com)>
+> > > > > > > > >  =20
+> > > > > > > > > >>  To: nemomacnaught  <nemomacnaught=40yahoo.com (mail=
+to:nemomacnaught=40yahoo.com)>; nemo.macnaught  <
+> > > > > > > > >  =20
+> > > > > > > > > >>   nemo.macnaught=40gmail.com (mailto:nemo.macnaught=40=
+gmail.com)>
+> > > > > > > > >  =20
+> > > > > > > > > >>  Cc: nemo.macnaught  <nemo.macnaught=40mail.ru (mail=
+to:nemo.macnaught=40mail.ru)>; nemo.macnaught  <
+> > > > > > > > >  =20
+> > > > > > > > > >>   nemo.macnaught=40outlook.com (mailto:nemo.macnaugh=
+t=40outlook.com)>; nemo.macnaught  <nemo.macnaught=40mail.com (mailto:nem=
+o.macnaught=40mail.com)>;
+> > > > > > > > >  =20
+> > > > > > > > > >>  nemomacnaught  <nemomacnaught=40yahoo.com (mailto:n=
+emomacnaught=40yahoo.com)>
+> > > > > > > > >  =20
+> > > > > > > > > >>  Sent: Sat, Nov 16, 2019 6:06 pm
+> > > > > > > > >  =20
+> > > > > > > > > >>  Subject: RE: Thread: 002, more of the same
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  AOL iOS App
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  No formatting options.
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  Emoji: =F0=9F=9A=A8=F0=9F=9A=A8=E2=9B=B7=F0=9F=9A=A8=
+=F0=9F=9A=A8
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  =E3=82=B7=E3=83=BC=E3=83=84=E3=81=AE=E4=B8=8A=E3=81=
+=8C=E3=81=99=E3=81=94=E3=81=8F=E6=9A=97=E3=81=84=EF=BC=81=E6=9E=95=E3=81=A0=
+=EF=BC=81
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  Sent from AOL Mobile Mail
+> > > > > > > > >  =20
+> > > > > > > > > >>  Get the new AOL app:  mail.mobile.aol.com (http://m=
+ail.mobile.aol.com)
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  On Saturday, November 16, 2019,  nemomacnaught=40ya=
+hoo.com (mailto:nemomacnaught=40yahoo.com)   <
+> > > > > > > > >  =20
+> > > > > > > > > >>   nemomacnaught=40yahoo.com (mailto:nemomacnaught=40=
+yahoo.com)>  wrote:
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  AOL Android app
+> > > > > > > > >  =20
+> > > > > > > > > >>  No formatting options.
+> > > > > > > > >  =20
+> > > > > > > > > >>  Emoji: =F0=9F=8D=84=F0=9F=8D=84=F0=9F=98=86=F0=9F=8D=
+=84=F0=9F=8D=84
+> > > > > > > > >  =20
+> > > > > > > > > >>  =E9=A4=83=E5=AD=90=E9=AD=9A=E5=BA=A7
+> > > > > > > > >  =20
+> > > > > > > > > >>  ------------------------------
+> > > > > > > > >  =20
+> > > > > > > > > >>  On Saturday, November 16, 2019 nemomacnaught  <nemo=
+macnaught=40yahoo.com (mailto:nemomacnaught=40yahoo.com)>
+> > > > > > > > >  =20
+> > > > > > > > > >>  wrote:
+> > > > > > > > >  =20
+> > > > > > > > > >>  Another simple test from Samsung Email for Android.=
+
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  But multiple paragraphs.
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  *=46ormatted* text.
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  Emoji:=F0=9F=8D=8D=F0=9F=8D=8D=F0=9F=98=85=F0=9F=8D=
+=8D=F0=9F=8D=8D
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  =E3=81=9D=E3=81=97=E3=81=A6=E3=80=81=E6=97=A5=E6=9C=
+=AC=E8=AA=9E=E3=82=82=E3=81=82=E3=82=8B=E3=80=82
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>  Sent from my Samsung Galaxy smartphone.
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >>
+> > > > > > > > >  =20
+> > > > > > > > > >
+> > > > > > > > >              =20
+> > > > > >
+> > > > > > Thunderbird Desktop
+> > > > > >
+> > > > > >
+> > > > > >  =20
+> > > > > >
+> > > > > > By default, Thunderbird starts a response below the thread hi=
+story, though this is configurable.
+> > > > > >
+> > > > > >
+> > > > > >  =20
+> > > > > >  =20
+> > > > > > --
+> > > > > >  =20
+> > > > > > Nemo MacNaught
+> > > > > >          =20
+> > > >
+> > > >    =20
+> > >
+> > >        =20
+> >  =20
+> >
+> >  =20
+> >
+> >  =20
+> >
+> >  =20
+> >
+> >  =20
+> >
+> >    =20
+> >  =20
+> >
+> >  =20
+> >
+> >  =20
+> >
+> >  =20
+> >
+> >  =20
+> >
+> >                    
+--5dd19ce8_6b8b4567_2508
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+<html><body><div id=3D=22edo-message=22><div></div>Edison Mail iOS.</div>=
+<div id=3D=22edo-message=22><br></div><div id=3D=22edo-message=22><b><i><=
+u>=46ormatting</u></i></b>&nbsp; is just b u i.</div><div id=3D=22edo-mes=
+sage=22><br></div><div id=3D=22edo-message=22>Inline images. Attachments.=
+<div id=3D=225=46=46D=461=466-55E6-4D12-90E4-AD1A6A01BC=462=22></div></di=
+v><div id=3D=22edo-meta=22></div><div id=3D=22edo-original=22><div><br><b=
+r><blockquote type=3D=22cite=22 style=3D=22margin:1ex 0 0 0;border-left:1=
+px =23ccc solid;padding-left:0.5ex;=22><div>On Nov 17, 2019 at 11:07, &lt=
+;<a href=3D=22mailto:tamarind.pony=40tutanota.com=22>Tamarind Pony</a>&gt=
+; wrote:<br><br></div><div>
+  =20
+    <meta http-equiv=3D=22content-type=22 content=3D=22text/html; charset=
+=3DUT=46-8=22>
+  =20
+  =20
+<div style=3D=2216px=22 text-align=3D=22left=22><br></div><div style=3D=22=
+16px=22 text-align=3D=22left=22>Tutanota Android<br></div><div style=3D=22=
+16px=22 text-align=3D=22left=22><br></div><div style=3D=2216px=22 text-al=
+ign=3D=22left=22>Same features as Tutanota iOS.&nbsp;</div><div style=3D=22=
+16px=22 text-align=3D=22left=22>-- <br></div><div style=3D=2216px=22 text=
+-align=3D=22left=22> Securely sent with Tutanota. Get your own encrypted,=
+ ad-free mailbox: <br></div><div style=3D=2216px=22 text-align=3D=22left=22=
+> https://tutanota.com<br></div><div style=3D=2216px=22 text-align=3D=22l=
+eft=22><br></div><div style=3D=2216px=22 text-align=3D=22left=22><br></di=
+v><div style=3D=2216px=22 text-align=3D=22left=22>Nov 17, 2019, 10:35 by =
+nemomacnaught=40zohomail.com:<br></div><blockquote class=3D=22tutanota=5F=
+quote=22 style=3D=22border-left: 1px solid =2393A3B8; padding-left: 10px;=
+ margin-left: 5px;=22><div style=3D=22font-size:10pt;font-family:Verdana,=
+Arial,Helvetica,sans-serif;color:=23000000;=22><div><div>Zoho Mail iOS<br=
+></div><div><br></div><div>Attachments. No inline images.<br></div><div><=
+br></div><div><b><i><u>=46ormatting</u></i></b>=3F Just b u i.<br></div><=
+div><br></div><div><br></div><div><div>Sent from Zoho Mail on iPhone<br><=
+/div></div></div><div><div style=3D=2216px=22 text-align=3D=22left=22><br=
+></div></div><div class=3D=22=22>---- On Sun, 17 Nov 2019 10:29:31 -0800 =
+ nemo.macnaught=40outlook.com&lt;nemo.macnaught=40outlook.com&gt; wrote -=
+---<br></div><div><br></div><blockquote style=3D=22border-left: 1px solid=
+ rgb(204, 204, 204); padding-left: 6px; margin-left: 5px;=22><div><div di=
+r=3D=22ltr=22><div><br></div><div><div><div><br></div></div><div>Outlook =
+iOS<br></div><div style=3D=22text-align: left;=22 dir=3D=22ltr=22><br></d=
+iv><div style=3D=22text-align: left;=22 dir=3D=22ltr=22>Adding Zoho Mail =
+address<br></div><div style=3D=22text-align: left;=22 dir=3D=22ltr=22 cla=
+ss=3D=22=22><br></div><div style=3D=22text-align: left;=22 dir=3D=22ltr=22=
+ class=3D=22=22><br></div><div class=3D=22=22>Get <a target=3D=22=5Fblank=
+=22 href=3D=22https://aka.ms/o0ukef=22 rel=3D=22noopener noreferrer=22> O=
+utlook for iOS</a><br></div></div></div><div style=3D=2216px=22 text-alig=
+n=3D=22left=22><hr style=3D=22display: inline-block;width: 98.0%;=22><br>=
+</div><div dir=3D=22ltr=22 id=3D=22x=5F1910261675divRply=46wdMsg=22><div =
+style=3D=2216px=22 text-align=3D=22left=22><span class=3D=22font=22 style=
+=3D=22font-family:Calibri, sans-serif=22><span class=3D=22colour=22 style=
+=3D=22color:=23000000=22><b>=46rom:</b> <a target=3D=22=5Fblank=22 href=3D=
+=22mailto:tamarind.pony=40tutanota.com=22 rel=3D=22noopener noreferrer=22=
+>tamarind.pony=40tutanota.com</a> &lt;<a target=3D=22=5Fblank=22 href=3D=22=
+mailto:tamarind.pony=40tutanota.com=22 rel=3D=22noopener noreferrer=22>ta=
+marind.pony=40tutanota.com</a>&gt;<br> <b>Sent:</b> Sunday, November 17, =
+2019 9:59:27 AM<br> <b>To:</b> Nemo MacNaught &lt;<a target=3D=22=5Fblank=
+=22 href=3D=22mailto:nemomacnaught=40yahoo.com=22 rel=3D=22noopener noref=
+errer=22>nemomacnaught=40yahoo.com</a>&gt;<br> <b>Cc:</b> Nemo MacNaught =
+&lt;<a target=3D=22=5Fblank=22 href=3D=22mailto:nemo.macnaught=40gmail.co=
+m=22 rel=3D=22noopener noreferrer=22>nemo.macnaught=40gmail.com</a>&gt;; =
+Nemo MacNaught &lt;<a target=3D=22=5Fblank=22 href=3D=22mailto:nemomacnau=
+ght=40aol.com=22 rel=3D=22noopener noreferrer=22>nemomacnaught=40aol.com<=
+/a>&gt;; Nemo MacNaught &lt;<a target=3D=22=5Fblank=22 href=3D=22mailto:n=
+emo.macnaught=40mail.com=22 rel=3D=22noopener noreferrer=22>nemo.macnaugh=
+t=40mail.com</a>&gt;; Nemo MacNaught &lt;<a target=3D=22=5Fblank=22 href=3D=
+=22mailto:nemo.macnaught=40mail.ru=22 rel=3D=22noopener noreferrer=22>nem=
+o.macnaught=40mail.ru</a>&gt;; <a target=3D=22=5Fblank=22 href=3D=22mailt=
+o:nemo.macnaught=40outlook.com=22 rel=3D=22noopener noreferrer=22>nemo.ma=
+cnaught=40outlook.com</a> &lt;<a target=3D=22=5Fblank=22 href=3D=22mailto=
+:nemo.macnaught=40outlook.com=22 rel=3D=22noopener noreferrer=22>nemo.mac=
+naught=40outlook.com</a>&gt;<br> <b>Subject:</b> Re: Thread: 002, more of=
+ the same</span></span> </div><div>&nbsp;<br></div></div><div><div>Tutano=
+ta iOS<br></div><div><br></div><div>exactly like mobile browser, but no i=
+nline images&nbsp;<br></div><div><br></div><div>-- <br></div><div>Securel=
+y sent with Tutanota. Get your own encrypted, ad-free mailbox: <br></div>=
+<div><a target=3D=22=5Fblank=22 href=3D=22https://tutanota.com=22 rel=3D=22=
+noopener noreferrer=22>https://tutanota.com</a><br></div><div><br></div><=
+div><br></div><div>Nov 17, 2019, 09:55 by <a target=3D=22=5Fblank=22 href=
+=3D=22mailto:tamarind.pony=40tutanota.com=22 rel=3D=22noopener noreferrer=
+=22>tamarind.pony=40tutanota.com</a>:<br></div><blockquote style=3D=22bor=
+der-left: 1.0px solid rgb(147,163,184);padding-left: 10.0px;margin-left: =
+5.0px;=22 class=3D=22=22><div>Tutanota Mobile Browser<br></div><ul><li>Bi=
+lleted Lists<br></li></ul><ol><li>numbered lists<br></li></ol><div><b>bol=
+d</b><br></div><div><u>underline</u><br></div><div><i>italic</i><br></div=
+><div><br></div><div><span class=3D=22font=22 style=3D=22font-family:mono=
+space, sans-serif=22>code</span><br></div><div><br></div><div><a target=3D=
+=22=5Fblank=22 href=3D=22https://Https://Wikipedia.com=22 rel=3D=22noopen=
+er noreferrer=22>links</a><br></div><div><br></div><div>font sizes but no=
+t typefaces<br></div><div><br></div><div>left, right, center alignment an=
+d justification<br></div><div><br></div><div>inline images, regular attac=
+hments<br></div><div><br></div><div>no blockquotes&nbsp;<br></div><div>--=
+ <br></div><div>Securely sent with Tutanota. Get your own encrypted, ad-f=
+ree mailbox: <br></div><div><a target=3D=22=5Fblank=22 href=3D=22https://=
+tutanota.com=22 rel=3D=22noopener noreferrer=22>https://tutanota.com</a><=
+br></div><div><br></div><div><br></div><div>Nov 17, 2019, 09:48 by <a tar=
+get=3D=22=5Fblank=22 href=3D=22mailto:nemomacnaught=40yahoo.com=22 rel=3D=
+=22noopener noreferrer=22>nemomacnaught=40yahoo.com</a>:<br></div><blockq=
+uote style=3D=22border-left: 1.0px solid rgb(147,163,184);padding-left: 1=
+0.0px;margin-left: 5.0px;=22 class=3D=22=22><div><div><span class=3D=22fo=
+nt=22 style=3D=22font-family:&quot;Party LET&quot;, serif=22>Spark iOS</s=
+pan> <br></div><div dir=3D=22auto=22><span class=3D=22font=22 style=3D=22=
+font-family:&quot;Party LET&quot;, serif=22></span><br></div><div dir=3D=22=
+auto=22><span class=3D=22font=22 style=3D=22font-family:&quot;Party LET&q=
+uot;, serif=22>Multiple paragraphs</span><br></div></div><div><div><br></=
+div><div dir=3D=22auto=22>Nemo MacNaught<br></div></div><div><div>On Nov =
+16, 2019, 21:58 -0800, Nemo MacNaught &lt;<a target=3D=22=5Fblank=22 href=
+=3D=22mailto:nemomacnaught=40aol.com=22 rel=3D=22noopener noreferrer=22>n=
+emomacnaught=40aol.com</a>&gt;, wrote:<br></div><div><br></div><blockquot=
+e style=3D=22margin: 5.0px 5.0px;padding-left: 10.0px;border-left: thin s=
+olid rgb(26,188,156);=22 class=3D=22=22><div class=3D=22=22>On 11/16/19 9=
+:41 PM, Nemo MacNaught wrote:<br></div><blockquote style=3D=22margin: 5.0=
+px 5.0px;padding-left: 10.0px;border-left: thin solid rgb(230,126,34);=22=
+ class=3D=22=22><div dir=3D=22ltr=22><div>Changed Gmail Desktop Browser's=
+ language to Japanese.<br></div><div><br></div><div>=E7=AC=91<br></div></=
+div><div><br></div><div class=3D=22=22><div class=3D=22=22 dir=3D=22ltr=22=
+>2019=E5=B9=B411=E6=9C=8816=E6=97=A5(=E5=9C=9F) 21:24 Nemo MacNaught &lt;=
+<a href=3D=22mailto:nemo.macnaught=40gmail.com=22 target=3D=22=5Fblank=22=
+ rel=3D=22noopener noreferrer=22>nemo.macnaught=40gmail.com</a>&gt;:<br><=
+/div><blockquote style=3D=22margin: 5.0px 5.0px;padding-left: 10.0px;bord=
+er-left: thin solid rgb(52,152,219);=22 class=3D=22=22><div><div dir=3D=22=
+auto=22>Gmail iOS App.<br></div></div><div dir=3D=22auto=22><br></div><di=
+v dir=3D=22auto=22><br></div><div><div class=3D=22=22><div class=3D=22=22=
+ dir=3D=22ltr=22>On Sat, Nov 16, 2019 at 20:45 Nemo MacNaught &lt;<a targ=
+et=3D=22=5Fblank=22 href=3D=22mailto:nemo.macnaught=40gmail.com=22 rel=3D=
+=22noopener noreferrer=22>nemo.macnaught=40gmail.com</a>&gt; wrote:<br></=
+div><blockquote style=3D=22margin: 5.0px 5.0px;padding-left: 10.0px;borde=
+r-left: thin solid rgb(211,84,0);=22 class=3D=22=22><div>Gmail desktop ba=
+sic html browser<br></div><div><br></div><div>In case you needed to remem=
+ber what the first version of gmail looked like...<br></div><div><br></di=
+v><div>On 11/16/19, Nemo MacNaught &lt;<a target=3D=22=5Fblank=22 href=3D=
+=22mailto:nemo.macnaught=40gmail.com=22 rel=3D=22noopener noreferrer=22>n=
+emo.macnaught=40gmail.com</a>&gt; wrote:<br></div><div>&gt; Gmail mobile =
+Browser<br></div><div>&gt;<br></div><div>&gt; The Gmail email client that=
+ can=E2=80=99t do anything but attachments.<br></div><div>&gt;<br></div><=
+div>&gt; On Saturday, November 16, 2019, Nemo MacNaught &lt;<a target=3D=22=
+=5Fblank=22 href=3D=22mailto:nemomacnaught=40yahoo.com=22 rel=3D=22noopen=
+er noreferrer=22>nemomacnaught=40yahoo.com</a>&gt;<br></div><div>&gt; wro=
+te:<br></div><div>&gt;<br></div><div>&gt;&gt; Yahoo iOS App<br></div><div=
+>&gt;&gt;<br></div><div>&gt;&gt; *Basic* formatting.<br></div><div>&gt;&g=
+t;<br></div><div>&gt;&gt; Nemo MacNaught<br></div><div>&gt;&gt;<br></div>=
+<div>&gt;&gt; On Saturday, November 16, 2019, 18:37, Nemo MacNaught &lt;<=
+br></div><div>&gt;&gt; <a target=3D=22=5Fblank=22 href=3D=22mailto:nemo.m=
+acnaught=40gmail.com=22 rel=3D=22noopener noreferrer=22> nemo.macnaught=40=
+gmail.com</a>&gt; wrote:<br></div><div>&gt;&gt;<br></div><div>&gt;&gt; Ou=
+tlook Android App<br></div><div>&gt;&gt;<br></div><div>&gt;&gt; No format=
+ting.<br></div><div>&gt;&gt;<br></div><div>&gt;&gt; Nemo McNaught<br></di=
+v><div>&gt;&gt;<br></div><div>&gt;&gt; ------------------------------<br>=
+</div><div>&gt;&gt; *=46rom:* Nemo MacNaught &lt;<a target=3D=22=5Fblank=22=
+ href=3D=22mailto:nemo.macnaught=40gmail.com=22 rel=3D=22noopener norefer=
+rer=22>nemo.macnaught=40gmail.com</a>&gt;<br></div><div>&gt;&gt; *Sent:* =
+Saturday, November 16, 2019 6:35:29 PM<br></div><div>&gt;&gt; *To:* <a ta=
+rget=3D=22=5Fblank=22 href=3D=22mailto:nemomacnaught=40yahoo.com=22 rel=3D=
+=22noopener noreferrer=22> nemomacnaught=40yahoo.com</a> &lt;<a target=3D=
+=22=5Fblank=22 href=3D=22mailto:nemomacnaught=40yahoo.com=22 rel=3D=22noo=
+pener noreferrer=22>nemomacnaught=40yahoo.com</a>&gt;; Nemo MacNaught &lt=
+;<br></div><div>&gt;&gt; <a target=3D=22=5Fblank=22 href=3D=22mailto:nemo=
+macnaught=40aol.com=22 rel=3D=22noopener noreferrer=22> nemomacnaught=40a=
+ol.com</a>&gt;<br></div><div>&gt;&gt; *Cc:* Nemo MacNaught &lt;<a target=3D=
+=22=5Fblank=22 href=3D=22mailto:nemo.macnaught=40mail.ru=22 rel=3D=22noop=
+ener noreferrer=22>nemo.macnaught=40mail.ru</a>&gt;; <a target=3D=22=5Fbl=
+ank=22 href=3D=22mailto:nemo.macnaught=40outlook.com=22 rel=3D=22noopener=
+ noreferrer=22> nemo.macnaught=40outlook.com</a><br></div><div>&gt;&gt; &=
+lt;<a target=3D=22=5Fblank=22 href=3D=22mailto:nemo.macnaught=40outlook.c=
+om=22 rel=3D=22noopener noreferrer=22>nemo.macnaught=40outlook.com</a>&gt=
+;; Nemo MacNaught &lt;<a target=3D=22=5Fblank=22 href=3D=22mailto:nemo.ma=
+cnaught=40mail.com=22 rel=3D=22noopener noreferrer=22>nemo.macnaught=40ma=
+il.com</a>&gt;<br></div><div>&gt;&gt; *Subject:* Re: Thread: 002, more of=
+ the same<br></div><div>&gt;&gt;<br></div><div>&gt;&gt; Wikipedia &lt;<a =
+target=3D=22=5Fblank=22 href=3D=22https://wikipedia.org=22 rel=3D=22noope=
+ner noreferrer=22>https://wikipedia.org</a>&gt;<br></div><div>&gt;&gt;<br=
+></div><div>&gt;&gt; Nemo McNaught<br></div><div>&gt;&gt;<br></div><div>&=
+gt;&gt; ------------------------------<br></div><div>&gt;&gt; *=46rom:* N=
+emo MacNaught &lt;<a target=3D=22=5Fblank=22 href=3D=22mailto:nemo.macnau=
+ght=40gmail.com=22 rel=3D=22noopener noreferrer=22>nemo.macnaught=40gmail=
+.com</a>&gt;<br></div><div>&gt;&gt; *Sent:* Saturday, November 16, 2019, =
+18:32<br></div><div>&gt;&gt; *To:* <a target=3D=22=5Fblank=22 href=3D=22m=
+ailto:nemomacnaught=40yahoo.com=22 rel=3D=22noopener noreferrer=22> nemom=
+acnaught=40yahoo.com</a>; Nemo MacNaught<br></div><div>&gt;&gt; *Cc:* <a =
+target=3D=22=5Fblank=22 href=3D=22mailto:nemo.macnaught=40mail.ru=22 rel=3D=
+=22noopener noreferrer=22> nemo.macnaught=40mail.ru</a>; <a target=3D=22=5F=
+blank=22 href=3D=22mailto:nemo.macnaught=40outlook.com=22 rel=3D=22noopen=
+er noreferrer=22> nemo.macnaught=40outlook.com</a>;<br></div><div>&gt;&gt=
+; <a target=3D=22=5Fblank=22 href=3D=22mailto:nemo.macnaught=40mail.com=22=
+ rel=3D=22noopener noreferrer=22> nemo.macnaught=40mail.com</a><br></div>=
+<div>&gt;&gt; *Subject:* Re: Thread: 002, more of the same<br></div><div>=
+&gt;&gt;<br></div><div>&gt;&gt; Outlook Android App<br></div><div>&gt;&gt=
+;<br></div><div>&gt;&gt; Nibble, nibble.<br></div><div>&gt;&gt;<br></div>=
+<div>&gt;&gt; Get Outlook for Android &lt;<a target=3D=22=5Fblank=22 href=
+=3D=22https://aka.ms/ghei36=22 rel=3D=22noopener noreferrer=22>https://ak=
+a.ms/ghei36</a>&gt;<br></div><div>&gt;&gt;<br></div><div>&gt;&gt; -------=
+-----------------------<br></div><div>&gt;&gt; *=46rom:* Nemo MacNaught &=
+lt;<a target=3D=22=5Fblank=22 href=3D=22mailto:nemomacnaught=40aol.com=22=
+ rel=3D=22noopener noreferrer=22>nemomacnaught=40aol.com</a>&gt;<br></div=
+><div>&gt;&gt; *Sent:* Saturday, November 16, 2019 6:15:54 PM<br></div><d=
+iv>&gt;&gt; *To:* <a target=3D=22=5Fblank=22 href=3D=22mailto:nemomacnaug=
+ht=40yahoo.com=22 rel=3D=22noopener noreferrer=22> nemomacnaught=40yahoo.=
+com</a> &lt;<a target=3D=22=5Fblank=22 href=3D=22mailto:nemomacnaught=40y=
+ahoo.com=22 rel=3D=22noopener noreferrer=22>nemomacnaught=40yahoo.com</a>=
+&gt;;<br></div><div>&gt;&gt; <a target=3D=22=5Fblank=22 href=3D=22mailto:=
+nemo.macnaught=40gmail.com=22 rel=3D=22noopener noreferrer=22> nemo.macna=
+ught=40gmail.com</a> &lt;<a target=3D=22=5Fblank=22 href=3D=22mailto:nemo=
+.macnaught=40gmail.com=22 rel=3D=22noopener noreferrer=22>nemo.macnaught=40=
+gmail.com</a>&gt;<br></div><div>&gt;&gt; *Cc:* <a target=3D=22=5Fblank=22=
+ href=3D=22mailto:nemo.macnaught=40mail.ru=22 rel=3D=22noopener noreferre=
+r=22> nemo.macnaught=40mail.ru</a> &lt;<a target=3D=22=5Fblank=22 href=3D=
+=22mailto:nemo.macnaught=40mail.ru=22 rel=3D=22noopener noreferrer=22>nem=
+o.macnaught=40mail.ru</a>&gt;;<br></div><div>&gt;&gt; <a target=3D=22=5Fb=
+lank=22 href=3D=22mailto:nemo.macnaught=40outlook.com=22 rel=3D=22noopene=
+r noreferrer=22> nemo.macnaught=40outlook.com</a> &lt;<a target=3D=22=5Fb=
+lank=22 href=3D=22mailto:nemo.macnaught=40outlook.com=22 rel=3D=22noopene=
+r noreferrer=22>nemo.macnaught=40outlook.com</a>&gt;;<br></div><div>&gt;&=
+gt; <a target=3D=22=5Fblank=22 href=3D=22mailto:nemo.macnaught=40mail.com=
+=22 rel=3D=22noopener noreferrer=22> nemo.macnaught=40mail.com</a> &lt;<a=
+ target=3D=22=5Fblank=22 href=3D=22mailto:nemo.macnaught=40mail.com=22 re=
+l=3D=22noopener noreferrer=22>nemo.macnaught=40mail.com</a>&gt;<br></div>=
+<div>&gt;&gt; *Subject:* Re: Thread: 002, more of the same<br></div><div>=
+&gt;&gt;<br></div><div>&gt;&gt; AOL Desktop Browser<br></div><div>&gt;&gt=
+;<br></div><div>&gt;&gt; Many formatting options.<br></div><div>&gt;&gt;<=
+br></div><div>&gt;&gt;<br></div><div>&gt;&gt; -----Original Message-----<=
+br></div><div>&gt;&gt; =46rom: Nemo MacNaught &lt;<a target=3D=22=5Fblank=
+=22 href=3D=22mailto:nemomacnaught=40aol.com=22 rel=3D=22noopener norefer=
+rer=22>nemomacnaught=40aol.com</a>&gt;<br></div><div>&gt;&gt; To: nemomac=
+naught &lt;<a target=3D=22=5Fblank=22 href=3D=22mailto:nemomacnaught=40ya=
+hoo.com=22 rel=3D=22noopener noreferrer=22>nemomacnaught=40yahoo.com</a>&=
+gt;; nemo.macnaught &lt;<br></div><div>&gt;&gt; <a target=3D=22=5Fblank=22=
+ href=3D=22mailto:nemo.macnaught=40gmail.com=22 rel=3D=22noopener norefer=
+rer=22> nemo.macnaught=40gmail.com</a>&gt;<br></div><div>&gt;&gt; Cc: nem=
+o.macnaught &lt;<a target=3D=22=5Fblank=22 href=3D=22mailto:nemo.macnaugh=
+t=40mail.ru=22 rel=3D=22noopener noreferrer=22>nemo.macnaught=40mail.ru</=
+a>&gt;; nemo.macnaught &lt;<br></div><div>&gt;&gt; <a target=3D=22=5Fblan=
+k=22 href=3D=22mailto:nemo.macnaught=40outlook.com=22 rel=3D=22noopener n=
+oreferrer=22> nemo.macnaught=40outlook.com</a>&gt;; nemo.macnaught &lt;<a=
+ target=3D=22=5Fblank=22 href=3D=22mailto:nemo.macnaught=40mail.com=22 re=
+l=3D=22noopener noreferrer=22>nemo.macnaught=40mail.com</a>&gt;;<br></div=
+><div>&gt;&gt; nemomacnaught &lt;<a target=3D=22=5Fblank=22 href=3D=22mai=
+lto:nemomacnaught=40yahoo.com=22 rel=3D=22noopener noreferrer=22>nemomacn=
+aught=40yahoo.com</a>&gt;<br></div><div>&gt;&gt; Sent: Sat, Nov 16, 2019 =
+6:06 pm<br></div><div>&gt;&gt; Subject: RE: Thread: 002, more of the same=
+<br></div><div>&gt;&gt;<br></div><div>&gt;&gt; AOL iOS App<br></div><div>=
+&gt;&gt;<br></div><div>&gt;&gt; No formatting options.<br></div><div>&gt;=
+&gt;<br></div><div>&gt;&gt; Emoji: =F0=9F=9A=A8=F0=9F=9A=A8=E2=9B=B7=F0=9F=
+=9A=A8=F0=9F=9A=A8<br></div><div>&gt;&gt;<br></div><div>&gt;&gt; =E3=82=B7=
+=E3=83=BC=E3=83=84=E3=81=AE=E4=B8=8A=E3=81=8C=E3=81=99=E3=81=94=E3=81=8F=E6=
+=9A=97=E3=81=84=EF=BC=81=E6=9E=95=E3=81=A0=EF=BC=81<br></div><div>&gt;&gt=
+;<br></div><div>&gt;&gt; Sent from AOL Mobile Mail<br></div><div>&gt;&gt;=
+ Get the new AOL app: <a target=3D=22=5Fblank=22 href=3D=22http://mail.mo=
+bile.aol.com=22 rel=3D=22noopener noreferrer=22> mail.mobile.aol.com</a><=
+br></div><div>&gt;&gt;<br></div><div>&gt;&gt; On Saturday, November 16, 2=
+019, <a target=3D=22=5Fblank=22 href=3D=22mailto:nemomacnaught=40yahoo.co=
+m=22 rel=3D=22noopener noreferrer=22> nemomacnaught=40yahoo.com</a> &lt;<=
+br></div><div>&gt;&gt; <a target=3D=22=5Fblank=22 href=3D=22mailto:nemoma=
+cnaught=40yahoo.com=22 rel=3D=22noopener noreferrer=22> nemomacnaught=40y=
+ahoo.com</a>&gt; wrote:<br></div><div>&gt;&gt;<br></div><div>&gt;&gt; AOL=
+ Android app<br></div><div>&gt;&gt; No formatting options.<br></div><div>=
+&gt;&gt; Emoji: =F0=9F=8D=84=F0=9F=8D=84=F0=9F=98=86=F0=9F=8D=84=F0=9F=8D=
+=84<br></div><div>&gt;&gt; =E9=A4=83=E5=AD=90=E9=AD=9A=E5=BA=A7<br></div>=
+<div>&gt;&gt; ------------------------------<br></div><div>&gt;&gt; On Sa=
+turday, November 16, 2019 nemomacnaught &lt;<a target=3D=22=5Fblank=22 hr=
+ef=3D=22mailto:nemomacnaught=40yahoo.com=22 rel=3D=22noopener noreferrer=22=
+>nemomacnaught=40yahoo.com</a>&gt;<br></div><div>&gt;&gt; wrote:<br></div=
+><div>&gt;&gt; Another simple test from Samsung Email for Android.<br></d=
+iv><div>&gt;&gt;<br></div><div>&gt;&gt; But multiple paragraphs.<br></div=
+><div>&gt;&gt;<br></div><div>&gt;&gt; *=46ormatted* text.<br></div><div>&=
+gt;&gt;<br></div><div>&gt;&gt; Emoji:=F0=9F=8D=8D=F0=9F=8D=8D=F0=9F=98=85=
+=F0=9F=8D=8D=F0=9F=8D=8D<br></div><div>&gt;&gt;<br></div><div>&gt;&gt; =E3=
+=81=9D=E3=81=97=E3=81=A6=E3=80=81=E6=97=A5=E6=9C=AC=E8=AA=9E=E3=82=82=E3=81=
+=82=E3=82=8B=E3=80=82<br></div><div>&gt;&gt;<br></div><div>&gt;&gt;<br></=
+div><div>&gt;&gt;<br></div><div>&gt;&gt; Sent from my Samsung Galaxy smar=
+tphone.<br></div><div>&gt;&gt;<br></div><div>&gt;&gt;<br></div><div>&gt;&=
+gt;<br></div><div>&gt;<br></div></blockquote></div></div></blockquote></d=
+iv></blockquote><p>Thunderbird Desktop<br></p><p>By default, Thunderbird =
+starts a response below the thread history, though this is configurable.<=
+br></p><div class=3D=22=22><div>--<br></div><div>Nemo MacNaught<br></div>=
+</div></blockquote></div></blockquote><div><br></div></blockquote><div><b=
+r></div></div></div></blockquote><div><div><br></div><div><br></div><div>=
+<br></div><div><br></div><div id=3D=22Zm-=5FId=5F-Sgn=22><br></div></div>=
+<div><div><br></div><div><br></div><div><br></div><div><br></div><div id=3D=
+=22Zm-=5FId=5F-Sgn=22><br></div></div></div></blockquote>  =20
+
+
+</div></blockquote></div></div></body></html>
+--5dd19ce8_6b8b4567_2508--
+

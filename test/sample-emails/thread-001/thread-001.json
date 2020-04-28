@@ -1,0 +1,218 @@
+[
+  {
+    "index": 0,
+    "message_id": "1573779328.466488219@f144.i.mail.ru",
+    "email_client": "Mail.ru Desktop Web Client",
+    "current_content": "Initial email.",
+    "signature": "Nemo MacNaught",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 1,
+    "message_id": "CADpz9gACzi9eZTaRYuw31iBZA33hSiGFbANAGcJ=DUwJD-wKSg@mail.gmail.com",
+    "email_client": "Gmail Desktop Web Client",
+    "current_content": "This is a reply from the Gmail web client.",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 2,
+    "message_id": "1573783113.223660738@f530.i.mail.ru",
+    "email_client": "Mail.ru iOS App",
+    "current_content": "This is a reply from the mail.ru iOS app. As the signature says.",
+    "signature": "",
+    "signature_nag": "Sent from Mail.ru app for iOS",
+    "comments": ""
+  },
+  {
+    "index": 3,
+    "message_id": "1573783225.558368290@f745.i.mail.ru",
+    "email_client": "Mail.ru iOS App",
+    "current_content": "With a corrected address in the cc field.",
+    "signature": "",
+    "signature_nag": "Sent from Mail.ru app for iOS",
+    "comments": ""
+  },
+  {
+    "index": 4,
+    "message_id": "CADpz9gABJ2UtfKk9G8ULLfJ-bwXi10bhZKWb1+udgwsyd4FPag@mail.gmail.com",
+    "email_client": "Gmail iOS App",
+    "current_content": "This is a reply from the Gmail iOS app.",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 5,
+    "message_id": "MN2PR04MB7022A2F3852092DE82FFE12395700@MN2PR04MB7022.namprd04.prod.outlook.com",
+    "email_client": "Outlook iOS App",
+    "current_content": "First reply from the outlook iOS client.",
+    "signature": "",
+    "signature_nag": "Get Outlook for iOS",
+    "comments": ""
+  },
+  {
+    "index": 6,
+    "message_id": "1573785764.444192575@f100.i.mail.ru",
+    "email_client": "Mail.ru iOS App",
+    "current_content": "Now is the winter of our discontent.\n\nAnd this is a second line.\n\nAnd the third. Prawn Hacao.",
+    "signature": "",
+    "signature_nag": "Sent from Mail.ru app for iOS",
+    "comments": ""
+  },
+  {
+    "index": 7,
+    "message_id": "MN2PR04MB7022F8812AC975D8B8A7C27095700@MN2PR04MB7022.namprd04.prod.outlook.com",
+    "email_client": "Outlook Mobile Web Client",
+    "current_content": "This is the outlook.com mobile web client. Not to be confused with the outlook iOS client, which it’s not. It’s still sent from my iPhone.",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 8,
+    "message_id": "CADpz9gBLgqXyefvj=iWk6T7stGaH=WxUDvt70Nb8+Fg7Dc0nYw@mail.gmail.com",
+    "email_client": "Gmail iOS App",
+    "current_content": "If I could keep sand in a bottle, that would be great. Gmail iOS app here.",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 9,
+    "message_id": "514847d7-f4ed-45c9-a7f8-22360910d479@Spark",
+    "email_client": "Spark iOS App",
+    "current_content": "Reply from Spark iOS app sent from a yahoo email account.",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 10,
+    "message_id": "CADpz9gDQbzvQ-M_B-Qqq+YxJGeNKM6bZauJcenDKV=xRqHH3FQ@mail.gmail.com",
+    "email_client": "Gmail Mobile Web Client",
+    "current_content": "Gmail mobile site. Not the iOS app.",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 11,
+    "message_id": "CADpz9gBHabOGwX8=KA0oE8CETLr1VL_6ZxkoofcTx_8ScNXtUg@mail.gmail.com",
+    "email_client": "Gmail iOS App",
+    "current_content": "Gmail iOS App.",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 12,
+    "message_id": "64a0756c-84d2-47cc-865a-15d78d8ef54f@Spark",
+    "email_client": "Spark iOS App",
+    "current_content": "Spark iOS app again. This time with a signature",
+    "signature": "Nemo MacNaught",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 13,
+    "message_id": "1669759073.380165.1573788036280@mail.yahoo.com",
+    "email_client": "Yahoo! iOS mail app",
+    "current_content": "A reply from the Yahoo! iOS mail app.",
+    "signature": "",
+    "signature_nag": "Sent from Yahoo Mail for iPhone",
+    "comments": ""
+  },
+  {
+    "index": 14,
+    "message_id": "544619189.392863.1573788165846@mail.yahoo.com",
+    "email_client": "Yahoo! iOS mail app",
+    "current_content": "Another reply from the Yahoo! iOS app. Bet you weren’t expecting that! I’m out of control over here!",
+    "signature": "",
+    "signature_nag": "Sent from Yahoo Mail for iPhone",
+    "comments": ""
+  },
+  {
+    "index": 15,
+    "message_id": "CADpz9gDjj7srfB+eUb9cFWN11k5dQzWG-tv=54A62woTERPKJQ@mail.gmail.com",
+    "email_client": "Gmail iOS App",
+    "current_content": "You sure are sneaky.",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 16,
+    "message_id": "CADpz9gD2dMy73G_2XCHxB607yB7wJDDbyRmSkOJb4PDfXfozOQ@mail.gmail.com",
+    "email_client": "Gmail iOS App",
+    "current_content": "That last one was gmail for iOS. This one is too.",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 17,
+    "message_id": "MN2PR04MB70221788E1420B1A66FC144495700@MN2PR04MB7022.namprd04.prod.outlook.com",
+    "email_client": "Outlook iOS App",
+    "current_content": "Let’s see if the outlook iOS client breaks it.",
+    "signature": "",
+    "signature_nag": "Get Outlook for iOS",
+    "comments": ""
+  },
+  {
+    "index": 18,
+    "message_id": "CADpz9gDnMj3aUtdXPPZ50kmiRFKw1XmXyo1PJqMT_qCPAaTrAw@mail.gmail.com",
+    "email_client": "Gmail iOS App",
+    "current_content": "Adding the [mail.com](http://mail.com) address from the gmail iOS app.",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 19,
+    "message_id": "trinity-d4cc1124-2378-4f0e-88b3-3242233b79a1-1573790508046@3c-app-mailcom-lxa09",
+    "email_client": "Mail.com Mobile Web Client",
+    "current_content": "Replying from the mail.com mobile web client. Oh boy. Look at what it’s done with the quoting below.",
+    "signature": "",
+    "signature_nag": "",
+    "comments": "No HTML"
+  },
+  {
+    "index": 20,
+    "message_id": "CADpz9gCqtH3YiGz-w=kNQQnTNsEkhpM6J0XNxa6VKH+oe3Z7AQ@mail.gmail.com",
+    "email_client": "Gmail iOS App",
+    "current_content": "Yikes. Mail.com sucks. Let’s get gmail iOS to fix thi mess.",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 21,
+    "message_id": "35fyh9kido1opwy47kf8ucht.1573798019843@email.android.com",
+    "email_client": "Samsung Mail Android App",
+    "current_content": "Here come Samsung Mail on Android to wreck your day!",
+    "signature": "",
+    "signature_nag": "Sent from my Samsung Galaxy smartphone.",
+    "comments": "Thread breaks when Samsung replaces all the References with it's own Message-ID."
+  },
+  {
+    "index": 22,
+    "message_id": "CADpz9gBfSkzkEsMP9LYQb1K2N=fjAgVkB-a2Zf91rNmKOWiGqg@mail.gmail.com",
+    "email_client": "Gmail Android App",
+    "current_content": "Gmail Android App. So lovely.",
+    "signature": "",
+    "signature_nag": "Sent using the mail.com mail app",
+    "comments": ""
+  },
+  {
+    "index": 23,
+    "message_id": "trinity-5e3fad83-e0b9-4147-a617-e7c703280d88-1573800995901@msvc-mesg-gmxus009",
+    "email_client": "Mail.com iOS App",
+    "current_content": "From the Mail.com iOS app",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  }
+]

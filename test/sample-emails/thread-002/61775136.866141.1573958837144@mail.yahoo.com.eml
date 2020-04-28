@@ -1,0 +1,385 @@
+Delivered-To: nemo.macnaught@gmail.com
+Received: by 2002:a9f:2633:0:0:0:0:0 with SMTP id 48csp1066898uag;
+        Sat, 16 Nov 2019 18:47:23 -0800 (PST)
+X-Google-Smtp-Source: APXvYqx04lsdkVma1PwEI2oWCyTH74lJNXUv1x9rUYRDeCRKLukf364R4DnHF6lHs7zciWc6oa3O
+X-Received: by 2002:a37:a9cc:: with SMTP id s195mr17966267qke.428.1573958843835;
+        Sat, 16 Nov 2019 18:47:23 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1573958843; cv=none;
+        d=google.com; s=arc-20160816;
+        b=XXDxpiLGG4VWht1NSWRfRMiIoha/wh2L2mzkhpJeKIqk6SZQaltLK4NmON01z1pbIe
+         r/nJqNvf7lr0HV4hG38k8bh6dkWNheh23uWfwOGfmwDqKd7UH6FcBuV+0XgiAsbwd2vY
+         4V2axA5eTOJQoC+SmCE9IYhCD6RAZOkNHN3LnqdPo4zXHpSRctsa6JHNdWRq+zWn+AxQ
+         BV8cfygxUSXYYsWVzD/4AS411ykR+FyvfWwFiPKkl6oBAYRqO16RWB1p/Qhhg76hh0B2
+         T4LcWrrYx9Vvg6VLFp5dpuCylO3HWLzakSzYcg/FAyKXfkWFdBnmoWySaPgzpg/E+Agm
+         3EHA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:references:in-reply-to:message-id:cc:to:from
+         :date:dkim-signature;
+        bh=9era6wQjcekzcAL8pJ/Goaq3pbwS1g89/G5ebwjnW7s=;
+        b=aYqvnv8v+L2mQLMybiU/5neSLo8MDgK+S357Jr9XY6bw9K4f1eEQPhg0p03EnyOfO+
+         MzLyza7UChMK/XxMlIxg1TsXpVflYb9f2pCWuFqy28tKJzBIEEkdoCXLzpIgqtgSoC8t
+         RqMWW1Uob2P9Wpf9Rz7ukW94s8St/p5IA4NubQTxAVmhiU9qENOmxodYMnEI1YlTDsSZ
+         tRIwfe5BR1QfLXZYaX71+KwwLigIVZi6m7ZllEhnPylKCkwOmj1/H2wjqzvFhMdK8l78
+         ae64NySoJdVCE4WGemxwhA1ILR8qDw/Ry4uy4HVkG5Ca+UHZaL67CoZIJOK6o+TWP7Pv
+         Lz0Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=Flzb0d81;
+       spf=pass (google.com: domain of nemomacnaught@yahoo.com designates 74.6.131.125 as permitted sender) smtp.mailfrom=nemomacnaught@yahoo.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+Return-Path: <nemomacnaught@yahoo.com>
+Received: from sonic311-15.consmr.mail.bf2.yahoo.com (sonic311-15.consmr.mail.bf2.yahoo.com. [74.6.131.125])
+        by mx.google.com with ESMTPS id v91si9640648qte.240.2019.11.16.18.47.23
+        for <nemo.macnaught@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 16 Nov 2019 18:47:23 -0800 (PST)
+Received-SPF: pass (google.com: domain of nemomacnaught@yahoo.com designates 74.6.131.125 as permitted sender) client-ip=74.6.131.125;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yahoo.com header.s=s2048 header.b=Flzb0d81;
+       spf=pass (google.com: domain of nemomacnaught@yahoo.com designates 74.6.131.125 as permitted sender) smtp.mailfrom=nemomacnaught@yahoo.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=yahoo.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1573958843; bh=9era6wQjcekzcAL8pJ/Goaq3pbwS1g89/G5ebwjnW7s=; h=Date:From:To:Cc:In-Reply-To:References:Subject:From:Subject; b=Flzb0d819qKLBmWNrGpPhT1RT50PyACym4O7rGqpEsqu03/2sSyvB8R2VlHz+7S4jTVAk8uGWN+atYzqGcEmvaK/FwuVQFkeDznwOGd4v5a/OrtrzgtlO3EKEblQfjc2uJvj0CL2x2iCf3ZShLeSsJW1DKBnJ72nqjkpZo9zjWUpxKJLfuTe2Avo4QSYOLMZMzPvNjekxkfK1JaLq+SyjaLR4aSXBYr9OuxB6lyoIkaYAQXzHVtXdRn+PXhyeBedgzjaCPzJK1MscTQXr40QPzODIO2anps8xpgPQlg3GHU8To+dTBu8UKwyH0IIiXBMhy4k0LSt1GZSFANPyEDFDw==
+X-YMail-OSG: UMPtXWMVM1m4yyCjr3aaqL7s1SCz0znxXy5xw3fjowFA89maHHj4fhbZm9IYp1O
+ LTqwgKlQ2fHnAyMLSzrh78KM67xx06u5hK2RlKiGF6eRzR5Qqq8hJel8O3AG.igSAhp_TwE2ZMdM
+ KQzuLvGRegKQGgCRthVFiuLTpqbDPUQXMuQUQ.s0u5C7_zDl8PrKA9XGB0o.RjXAp84D3QiqLcmR
+ csPnJ3ccBsZGq1FxH5S7kkYldx5i0l5Cq3guM.W8SYZAjNCD.1wTmGDQ.OFGwDxxgl9AHbAt7V9O
+ XEbHHfN40LvB.i8RK4I9CVsIH3YnzY.Oym73MqfmjJlRYgbgwT8DMVxerOEm6TNe1CIccMZ7O0G5
+ jqsBsR_pQ.CvoQHYvG3YT5HRXx8zC98GVgiC0ydkB2.OL2Q_F3bV_K8BJETk23L1VAKmHr_gCgpw
+ WYaug1MVOs5avnDSwPx8aP6tKQg5omOPrfDpPsp2Yf5ljdX.V34WNTGAZ9WBcsz92PfDky8IG3p9
+ VneUxiphqsSOP9KwUzFxk0HigI5JVvwD2zJDW7TSWsS9rIdjKrkZBHbDDGbhT2bd0hmLDXsXZ4Dd
+ fTI46x8fdWhi9sMOhhcNg97XSQCuXqV_t3tTvK7yhuu5NMNmNA_fVT4JDF9UWyJ8BqlJrgqkC53P
+ hpmVAjFbNbDtc7OexnJzht18aHyGi1dVq.9kX9nG_neSdAVcL6.upeCB2Y48Cf8C3yBkco5Dzc_6
+ 2FzkBrJNQbLEMmCFtzUGHccI508TEqXSLhjPGQIAJGP6HqI9v0nV88l2TsqaUkY83Bq.H0vm87tG
+ OjY.xJv6hzmT4OqqGgnz97vQ8_O6u5PHYhX8bZayoEvQerPLHOX.rvkIP2eoYgzna_m8R20C6elV
+ 3QVo0EnFl7vNYB5jPION.BxKvw3NuToSY1TI_4XtzT.v17hPWmHY1Ql3iLtoQ4t777Dwd_6YFoQk
+ ifKqZkuTnojlFrcaR4qADEZbnx7oP6XCDsgphkA7WwmrDrpcONhQ.U45UTy4YGovFgEJXtyE.mIk
+ SngnHF3VtXnHst3L43vs5M.rRghvGucTZ36iJ8HQztPO41JRlNbzdkicb04aP_gwEWEB6gr21Nsy
+ Auhra4XPX63hIkMCGDWTGIj0s_LGQT1C9LuvciVpBHYjquQ1HhVbE5N7V59KwdF1bFydm_aIcn0F
+ Pom.nNmkgHYBxMnbwmtW0Lrc0Cd8jGClKXeBfLLUk4u4pLg.MaR0_9n1o6vT.tJQLMf0wR0wHfvI
+ WIIFPDR.CZxx3KToyUZ4uVP4kdR3F0F7sSvhWg00E69SC8DE3mNLhlkZ.7Ek9j.bg3dM0zrdRt1C
+ XMFNwdToqMH6.7O7aoqlpjaoJwjON1_SXosUV_mM.VTBCcQ--
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic311.consmr.mail.bf2.yahoo.com with HTTP; Sun, 17 Nov 2019 02:47:23 +0000
+Date: Sun, 17 Nov 2019 02:47:17 +0000 (UTC)
+From: Nemo MacNaught <nemomacnaught@yahoo.com>
+To: Nemo MacNaught <nemo.macnaught@gmail.com>, 
+	Nemo MacNaught <nemomacnaught@aol.com>
+Cc: Nemo MacNaught <nemo.macnaught@mail.ru>, 
+	"nemo.macnaught@outlook.com" <nemo.macnaught@outlook.com>, 
+	Nemo MacNaught <nemo.macnaught@mail.com>
+Message-ID: <61775136.866141.1573958837144@mail.yahoo.com>
+In-Reply-To: <BY5PR04MB6723737C8C1A096C937401FFA3720@BY5PR04MB6723.namprd04.prod.outlook.com>
+References: <BY5PR04MB6723E204D761028CE6B8316CA3720@BY5PR04MB6723.namprd04.prod.outlook.com> <BY5PR04MB6723737C8C1A096C937401FFA3720@BY5PR04MB6723.namprd04.prod.outlook.com>
+Subject: Re: Thread: 002, more of the same
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_866140_821623782.1573958837142"
+X-Mailer: WebService/1.1.14728 YahooMailIosMobile Yahoo%20Mail/47705 CFNetwork/1107.1 Darwin/19.0.0
+Content-Length: 11689
+
+------=_Part_866140_821623782.1573958837142
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Yahoo iOS App
+
+Basic formatting.
+
+Nemo MacNaught
+
+On Saturday, November 16, 2019, 18:37, Nemo MacNaught <nemo.macnaught@gmail=
+.com> wrote:
+
+Outlook Android App
+
+No formatting.=20
+
+Nemo McNaught
+From: Nemo MacNaught <nemo.macnaught@gmail.com>
+Sent: Saturday, November 16, 2019 6:35:29 PM
+To: nemomacnaught@yahoo.com <nemomacnaught@yahoo.com>; Nemo MacNaught <nemo=
+macnaught@aol.com>
+Cc: Nemo MacNaught <nemo.macnaught@mail.ru>; nemo.macnaught@outlook.com <ne=
+mo.macnaught@outlook.com>; Nemo MacNaught <nemo.macnaught@mail.com>
+Subject: Re: Thread: 002, more of the same=C2=A0Wikipedia
+
+Nemo McNaught
+From: Nemo MacNaught <nemo.macnaught@gmail.com>
+Sent: Saturday, November 16, 2019, 18:32
+To: nemomacnaught@yahoo.com; Nemo MacNaught
+Cc: nemo.macnaught@mail.ru; nemo.macnaught@outlook.com; nemo.macnaught@mail=
+.com
+Subject: Re: Thread: 002, more of the same
+
+Outlook Android App
+
+Nibble, nibble.=20
+
+Get Outlook for Android
+From: Nemo MacNaught <nemomacnaught@aol.com>
+Sent: Saturday, November 16, 2019 6:15:54 PM
+To: nemomacnaught@yahoo.com <nemomacnaught@yahoo.com>; nemo.macnaught@gmail=
+.com <nemo.macnaught@gmail.com>
+Cc: nemo.macnaught@mail.ru <nemo.macnaught@mail.ru>; nemo.macnaught@outlook=
+.com <nemo.macnaught@outlook.com>; nemo.macnaught@mail.com <nemo.macnaught@=
+mail.com>
+Subject: Re: Thread: 002, more of the same=C2=A0AOL Desktop Browser
+Many formatting options.
+
+
+-----Original Message-----
+From: Nemo MacNaught <nemomacnaught@aol.com>
+To: nemomacnaught <nemomacnaught@yahoo.com>; nemo.macnaught <nemo.macnaught=
+@gmail.com>
+Cc: nemo.macnaught <nemo.macnaught@mail.ru>; nemo.macnaught <nemo.macnaught=
+@outlook.com>; nemo.macnaught <nemo.macnaught@mail.com>; nemomacnaught <nem=
+omacnaught@yahoo.com>
+Sent: Sat, Nov 16, 2019 6:06 pm
+Subject: RE: Thread: 002, more of the same
+
+AOL iOS App
+No formatting options.
+Emoji: =F0=9F=9A=A8=F0=9F=9A=A8=E2=9B=B7=F0=9F=9A=A8=F0=9F=9A=A8
+=E3=82=B7=E3=83=BC=E3=83=84=E3=81=AE=E4=B8=8A=E3=81=8C=E3=81=99=E3=81=94=E3=
+=81=8F=E6=9A=97=E3=81=84=EF=BC=81=E6=9E=95=E3=81=A0=EF=BC=81
+
+Sent from AOL Mobile Mail
+Get the new AOL app: mail.mobile.aol.com
+On=C2=A0Saturday, November 16, 2019,=C2=A0nemomacnaught@yahoo.com=C2=A0<nem=
+omacnaught@yahoo.com>=C2=A0wrote:
+
+AOL Android appNo formatting options.Emoji: =F0=9F=8D=84=F0=9F=8D=84=F0=9F=
+=98=86=F0=9F=8D=84=F0=9F=8D=84
+=E9=A4=83=E5=AD=90=E9=AD=9A=E5=BA=A7On Saturday, November 16, 2019 nemomacn=
+aught <nemomacnaught@yahoo.com> wrote:
+Another simple test from Samsung Email for Android.=C2=A0
+But multiple paragraphs.=C2=A0
+Formatted text.=C2=A0
+Emoji:=F0=9F=8D=8D=F0=9F=8D=8D=F0=9F=98=85=F0=9F=8D=8D=F0=9F=8D=8D
+=E3=81=9D=E3=81=97=E3=81=A6=E3=80=81=E6=97=A5=E6=9C=AC=E8=AA=9E=E3=82=82=E3=
+=81=82=E3=82=8B=E3=80=82
+
+
+Sent from my Samsung Galaxy smartphone.
+
+
+
+
+
+------=_Part_866140_821623782.1573958837142
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office"><head><!--[=
+if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>=
+96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]--></head><bo=
+dy>
+Yahoo iOS App<br><br><b><i><u>Basic</u></i></b> formatting.<br><br>Nemo Mac=
+Naught<br><p class=3D"yahoo-quoted-begin" style=3D"font-size: 15px; color: =
+#715FFA; padding-top: 15px; margin-top: 0">On Saturday, November 16, 2019, =
+18:37, Nemo MacNaught &lt;nemo.macnaught@gmail.com&gt; wrote:</p><blockquot=
+e class=3D"iosymail"><div id=3D"yiv1546747215"><div>
+<div style=3D"direction:ltr;margin:0;padding:0;font-family:sans-serif;font-=
+size:11pt;color:black;">
+Outlook Android App<br clear=3D"none">
+<br clear=3D"none">
+</div>
+<div style=3D"direction:ltr;margin:0;padding:0;font-family:sans-serif;font-=
+size:11pt;color:black;">
+No formatting. <br clear=3D"none">
+<br clear=3D"none">
+</div>
+<div style=3D"direction:ltr;margin:0;padding:0;font-family:sans-serif;font-=
+size:11pt;color:black;">
+<span id=3D"yiv1546747215OutlookSignature">
+</span><div style=3D"direction:ltr;margin:0;padding:0;font-family:sans-seri=
+f;font-size:11pt;color:black;">
+Nemo McNaught</div>
+<br clear=3D"none">
+</div>
+<hr tabindex=3D"-1" style=3D"display:inline-block;width:98%;">
+<div class=3D"yiv1546747215yqt6984831663" id=3D"yiv1546747215yqt04653"><div=
+ dir=3D"ltr" id=3D"yiv1546747215divRplyFwdMsg"><b>From:</b> Nemo MacNaught =
+&lt;nemo.macnaught@gmail.com&gt;<br clear=3D"none">
+<b>Sent:</b> Saturday, November 16, 2019 6:35:29 PM<br clear=3D"none">
+<b>To:</b> nemomacnaught@yahoo.com &lt;nemomacnaught@yahoo.com&gt;; Nemo Ma=
+cNaught &lt;nemomacnaught@aol.com&gt;<br clear=3D"none">
+<b>Cc:</b> Nemo MacNaught &lt;nemo.macnaught@mail.ru&gt;; nemo.macnaught@ou=
+tlook.com &lt;nemo.macnaught@outlook.com&gt;; Nemo MacNaught &lt;nemo.macna=
+ught@mail.com&gt;<br clear=3D"none">
+<b>Subject:</b> Re: Thread: 002, more of the same
+<div>&nbsp;</div>
+</div>
+<div>
+<div style=3D"color:rgb(33,33,33);background-color:rgb(255,255,255);text-al=
+ign:left;">
+<a rel=3D"nofollow" shape=3D"rect" target=3D"_blank" href=3D"https://wikipe=
+dia.org">Wikipedia</a><br clear=3D"none">
+</div>
+<div id=3D"yiv1546747215ms-outlook-mobile-signature">
+<div><br clear=3D"none">
+</div>
+Nemo McNaught</div>
+<div class=3D"yiv1546747215ms-outlook-mobile-reference-message" id=3D"yiv15=
+46747215id-967c560b-e7aa-4d92-b4b7-6754f29cb99b">
+<div style=3D"font-family:sans-serif;font-size:12pt;color:rgb(0,0,0);"><br =
+clear=3D"none">
+</div>
+<hr tabindex=3D"-1" style=3D"display:inline-block;width:98%;">
+<div id=3D"yiv1546747215divRplyFwdMsg"><strong>From:</strong> Nemo MacNaugh=
+t &lt;nemo.macnaught@gmail.com&gt;<br clear=3D"none">
+<strong>Sent:</strong> Saturday, November 16, 2019, 18:32<br clear=3D"none"=
+>
+<strong>To:</strong> nemomacnaught@yahoo.com; Nemo MacNaught<br clear=3D"no=
+ne">
+<strong>Cc:</strong> nemo.macnaught@mail.ru; nemo.macnaught@outlook.com; ne=
+mo.macnaught@mail.com<br clear=3D"none">
+<strong>Subject:</strong> Re: Thread: 002, more of the same<br clear=3D"non=
+e">
+</div>
+<br clear=3D"none">
+</div></div></div></div><div class=3D"yiv1546747215yqt6984831663" id=3D"yiv=
+1546747215yqt21831"><div><div style=3D"direction:ltr;margin:0;padding:0;fon=
+t-family:sans-serif;font-size:11pt;color:black;">
+Outlook Android App<br clear=3D"none">
+<br clear=3D"none">
+</div>
+<div style=3D"direction:ltr;margin:0;padding:0;font-family:sans-serif;font-=
+size:11pt;color:black;">
+Nibble, nibble. <br clear=3D"none">
+<br clear=3D"none">
+</div>
+<div style=3D"direction:ltr;margin:0;padding:0;font-family:sans-serif;font-=
+size:11pt;color:black;">
+<span id=3D"yiv1546747215OutlookSignature">
+</span><div style=3D"direction:ltr;margin:0;padding:0;font-family:sans-seri=
+f;font-size:11pt;color:black;">
+Get <a rel=3D"nofollow" shape=3D"rect" target=3D"_blank" href=3D"https://ak=
+a.ms/ghei36">Outlook for Android</a></div>
+<br clear=3D"none">
+</div>
+<hr tabindex=3D"-1" style=3D"display:inline-block;width:98%;">
+<div dir=3D"ltr" id=3D"yiv1546747215divRplyFwdMsg"><b>From:</b> Nemo MacNau=
+ght &lt;nemomacnaught@aol.com&gt;<br clear=3D"none">
+<b>Sent:</b> Saturday, November 16, 2019 6:15:54 PM<br clear=3D"none">
+<b>To:</b> nemomacnaught@yahoo.com &lt;nemomacnaught@yahoo.com&gt;; nemo.ma=
+cnaught@gmail.com &lt;nemo.macnaught@gmail.com&gt;<br clear=3D"none">
+<b>Cc:</b> nemo.macnaught@mail.ru &lt;nemo.macnaught@mail.ru&gt;; nemo.macn=
+aught@outlook.com &lt;nemo.macnaught@outlook.com&gt;; nemo.macnaught@mail.c=
+om &lt;nemo.macnaught@mail.com&gt;<br clear=3D"none">
+<b>Subject:</b> Re: Thread: 002, more of the same
+<div>&nbsp;</div>
+</div>
+<div>
+<div style=3D"font:10pt Helvetica Neue;"><span style=3D"font-family:Arial, =
+Helvetica, sans-serif;">AOL Desktop Browser</span>
+<div><span style=3D"font-family:Arial, Helvetica, sans-serif;"><br clear=3D=
+"none">
+</span></div>
+<div><span style=3D"font-family:Arial, Helvetica, sans-serif;">Many formatt=
+ing options.<br clear=3D"none">
+</span><br clear=3D"none">
+<br clear=3D"none">
+<div style=3D"font-family:helvetica, arial;font-size:10pt;color:black;">---=
+--Original Message-----<br clear=3D"none">
+From: Nemo MacNaught &lt;nemomacnaught@aol.com&gt;<br clear=3D"none">
+To: nemomacnaught &lt;nemomacnaught@yahoo.com&gt;; nemo.macnaught &lt;nemo.=
+macnaught@gmail.com&gt;<br clear=3D"none">
+Cc: nemo.macnaught &lt;nemo.macnaught@mail.ru&gt;; nemo.macnaught &lt;nemo.=
+macnaught@outlook.com&gt;; nemo.macnaught &lt;nemo.macnaught@mail.com&gt;; =
+nemomacnaught &lt;nemomacnaught@yahoo.com&gt;<br clear=3D"none">
+Sent: Sat, Nov 16, 2019 6:06 pm<br clear=3D"none">
+Subject: RE: Thread: 002, more of the same<br clear=3D"none">
+<br clear=3D"none">
+<div id=3D"yiv1546747215">
+<div>AOL iOS App
+<div><br clear=3D"none">
+</div>
+<div>No formatting options.</div>
+<div><br clear=3D"none">
+</div>
+<div>Emoji: =F0=9F=9A=A8=F0=9F=9A=A8=E2=9B=B7=F0=9F=9A=A8=F0=9F=9A=A8</div>
+<div><br clear=3D"none">
+</div>
+<div>=E3=82=B7=E3=83=BC=E3=83=84=E3=81=AE=E4=B8=8A=E3=81=8C=E3=81=99=E3=81=
+=94=E3=81=8F=E6=9A=97=E3=81=84=EF=BC=81=E6=9E=95=E3=81=A0=EF=BC=81<br clear=
+=3D"none">
+<br clear=3D"none">
+<div id=3D"yiv1546747215__aol_mail_signature__">
+<div style=3D"font-family:HelveticaNeue-Light;color:#949494;font-size:11px;=
+">Sent from AOL Mobile Mail<br clear=3D"none">
+Get the new AOL app: <a rel=3D"nofollow" shape=3D"rect" target=3D"_blank" h=
+ref=3D"http://mail.mobile.aol.com" style=3D"font-family:HelveticaNeue-Light=
+;font-size:11px;">
+mail.mobile.aol.com</a></div>
+</div>
+<br clear=3D"none">
+<div class=3D"yiv1546747215yqt2791718707" id=3D"yiv1546747215yqt26846">
+<div class=3D"yiv1546747215aolmail_replyHeader">On&nbsp;Saturday, November =
+16, 2019,&nbsp;nemomacnaught@yahoo.com&nbsp;&lt;nemomacnaught@yahoo.com&gt;=
+&nbsp;wrote:
+</div>
+<br clear=3D"none">
+<blockquote style=3D"margin:0 0 0 9px;padding:0 0 0 9px;">
+<div id=3D"yiv1546747215">
+<div>
+<div dir=3D"ltr">AOL Android app</div>
+<div dir=3D"ltr">No formatting options.</div>
+<div dir=3D"ltr">Emoji: =F0=9F=8D=84=F0=9F=8D=84=F0=9F=98=86=F0=9F=8D=84=F0=
+=9F=8D=84<br clear=3D"none">
+</div>
+<div dir=3D"ltr">=E9=A4=83=E5=AD=90=E9=AD=9A=E5=BA=A7</div>
+<div class=3D"yiv1546747215device_aol_et_org_dt_dd_quote"></div>
+<hr style=3D"border:0;min-height:1px;color:#999;background-color:#999;width=
+:100%;margin:0 0 9px 0;padding:0;">
+<span style=3D"font-size:14px;color:#999999;">On Saturday, November 16, 201=
+9 nemomacnaught &lt;<span style=3D"color:#0000A0;">nemomacnaught@yahoo.com<=
+/span>&gt; wrote:</span><br clear=3D"none">
+<div id=3D"yiv1546747215"></div>
+</div>
+<div class=3D"yiv1546747215yqt8153626205" id=3D"yiv1546747215yqt48212">
+<div>
+<div>
+<div>Another simple test from Samsung Email for Android.&nbsp;</div>
+<div><br clear=3D"none">
+</div>
+<div>But multiple paragraphs.&nbsp;</div>
+<div><br clear=3D"none">
+</div>
+<div><u>Formatted</u> text.&nbsp;</div>
+<div><br clear=3D"none">
+</div>
+<div>Emoji:=F0=9F=8D=8D=F0=9F=8D=8D=F0=9F=98=85=F0=9F=8D=8D=F0=9F=8D=8D</di=
+v>
+<div><br clear=3D"none">
+</div>
+<div>=E3=81=9D=E3=81=97=E3=81=A6=E3=80=81=E6=97=A5=E6=9C=AC=E8=AA=9E=E3=82=
+=82=E3=81=82=E3=82=8B=E3=80=82</div>
+<div><br clear=3D"none">
+</div>
+<div><br clear=3D"none">
+</div>
+<div><br clear=3D"none">
+</div>
+<div id=3D"yiv1546747215composer_signature">
+<div style=3D"font-size:85%;color:#575757;">Sent from my Samsung Galaxy sma=
+rtphone.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br clear=3D"none">
+
+
+</div></div></div><blockquote></blockquote></blockquote>
+</body></html>
+------=_Part_866140_821623782.1573958837142--

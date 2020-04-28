@@ -1,0 +1,118 @@
+Delivered-To: nemo.macnaught@gmail.com
+Received: by 2002:a9f:2633:0:0:0:0:0 with SMTP id 48csp1040419uag;
+        Sat, 16 Nov 2019 17:57:35 -0800 (PST)
+X-Google-Smtp-Source: APXvYqyC+zl0/+sL7CDUFtPpqB/IY8sE2ieyz8lYmOqSk55IiuC/o+y2DUiyUSTF9tXEfyCFNhyO
+X-Received: by 2002:a37:aa8b:: with SMTP id t133mr6847827qke.449.1573955855083;
+        Sat, 16 Nov 2019 17:57:35 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1573955855; cv=none;
+        d=google.com; s=arc-20160816;
+        b=z+yhUzlTQ75DaCtcmlJ/FZkiAJ3FmuXUlQJtW20yLe3cvyFH+XAr2Z0blA7aV0Q2cW
+         IvH1kN5j0dFLN8gROJcdxJ1+RHDl9jkTw0xwykgeQGXgCoeJX+XP2eakYlV0RBl/aD/4
+         +LxOQmfuskNkEeRbu1v8CmiAM/p90Wx2+med2lmAJHVpB/Y3DEx1HSk6sSv6pDgv1/UO
+         uXJrVIoHYZEFOP7Q5727ZNQleiXBQqDFN7AFa9mg510b224UEVLQp2ZHNJMX7i/HZloz
+         1SRzbSZY0tCe/r7lUEtfQQCzOEEkCkCH1nWEvZ6IDnObNgnB6vbCQfqD9GGYrLb6kprv
+         X+GA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=references:mime-version:subject:message-id:to:from:date
+         :dkim-signature;
+        bh=nfCyS5lvKyvcAiefWa5JNwoz1CMgeQFs2H2l408ziC0=;
+        b=jj6APz/evpuLa8rmwA5Qfg9CJUqmQBn/JLcE9rYjS6fHA6IKJ8nS2dfiozf/HfTv9V
+         xUgQx8OCWF5U3onKQIgC1rJLj3nE2AiMqtTqlON395057fMxS4s/ySk6GfRL9TW+UsRM
+         SRmxHp3GH89qh/IzPRIGm3vBOGi8aVmv93/EFVBOSlCZR+g8RvNJihDpiStzhJ1luRaf
+         1Sf+MWUoYDGz28EH+EwU9RVc+rHC/FxppOQEhVjzQtco2d/ZS2UsTQ/kerOo+HfiuEo6
+         lFeTeuH6/MXL5U+OYeWbaEnJ092s+HakC2eyQWrc0Zf1E7sflps2ZxVhswyMbpLxF4QO
+         YRYQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@aol.com header.s=a2048 header.b=QJESJSRx;
+       spf=pass (google.com: domain of nemomacnaught@aol.com designates 74.6.135.125 as permitted sender) smtp.mailfrom=nemomacnaught@aol.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=aol.com
+Return-Path: <nemomacnaught@aol.com>
+Received: from sonic310-15.consmr.mail.bf2.yahoo.com (sonic310-15.consmr.mail.bf2.yahoo.com. [74.6.135.125])
+        by mx.google.com with ESMTPS id c16si9078799qtb.297.2019.11.16.17.57.34
+        for <nemo.macnaught@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 16 Nov 2019 17:57:35 -0800 (PST)
+Received-SPF: pass (google.com: domain of nemomacnaught@aol.com designates 74.6.135.125 as permitted sender) client-ip=74.6.135.125;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@aol.com header.s=a2048 header.b=QJESJSRx;
+       spf=pass (google.com: domain of nemomacnaught@aol.com designates 74.6.135.125 as permitted sender) smtp.mailfrom=nemomacnaught@aol.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=aol.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=aol.com; s=a2048; t=1573955854; bh=nfCyS5lvKyvcAiefWa5JNwoz1CMgeQFs2H2l408ziC0=; h=Date:From:To:Subject:References:From:Subject; b=QJESJSRxkBUWRpxnYWif3NZJPIjdLfiB8662IKsCXcZMK3+r7NksoecUd5tLr8qyD6r9QYQk/JuDh/+7FKNubpJ1hEx/UCt++2aXFq9Z6vBLmZHz0VlntogK1JNok/aReg9PwhS/7OOWEn0M897fzy+7il6zrwpDJbPMq7IIn/99loHvnCFCC8Ja0adLyc5OhdudUgl/YR/iLCRuaNI4An1vp/PDC8G2/0crrGRxd5kKgMyUKEkBUHJnlBWrv383XM0hVNvHbbk8pc2DxgpEhAa2Cq7tuAYs2UATbH0Yb2YHVoTUnucWRfP/T644A+2G5w2Eq9IKN4GTbFS1zJ8+vQ==
+X-YMail-OSG: fZKmiNYVM1lJI69ZYvmJ.uofPkjRXaNznNvTPR9vXLgqFiiDTyv8_tRAAgf9vz1
+ sF3cplJI7SsjxxR9surBaza9ncsZpXBcAHA9m76F48AOBHfg98zVJzyagP3WkO.Zuem0StEBjJp4
+ UV2RxTB4ZsU5oYUU9IBEvSmxjIpbQ_0TjdNxdqVAjpfVP4YrsPwDylTncFz3EYmnhZIz_c1fW34V
+ IkNwofWRvOvSlUZ7QHEKJSKaZztN9w4eggqFZMz1Y_ZcRhto653nJYR9aNjNCDpNl0.36t9BmcYt
+ 7q5yID6SGNPAaTBz1x9vdkck.aLERXEvK1Ubz.WLuv10LyUHW93NOB6BketfgGFApH1iEZ6.TCeS
+ qcsmX.rf.puAJngyVZhWsp7rnckgw6N1JK4KxPsUJHZv5GpNgBimURDkmnSvtK76CeO.UCFQ333x
+ qdS.v6yRt5kableZUeAgxkk8Zt9XpWhNgeYGmaA4S_IAYaNxt8Y2h4PfJxagqSap7LhtqS1nProK
+ mbjWOyeI_05a7fv8whZftFaqwTz6KIqeRe5v0QVY_pN0PCcT96XPN36CGx_yqzVGYD.AvwAWPIi.
+ v33EOk.LMZAuVrDPyENFt8CHot5lcMKOomeB24Z0BIwDeg2eoqsL8FU2A.VnqCjLt.39ZiPSt_Bz
+ qWkX3e.Ba8UBqshMgR_Fb1dieoER39YxkMG1qQEcKxXBzraACWJl5gykb.XJxmo_SGJBK4Ry016Q
+ vA0odFfzw0nxaAYMjEjf3ORE9N2GaRxTt1x1f3EG5Tbp_BDCyD5pkv7XgehSNn9qwqqNlCgWVSgA
+ Az03cTX_Oss7wF7Tj2U62.2oDgx_q9amFGmiLd4ooJoj0Xq1CF9SiuvKa0_ptj7fXQgetbuA02P2
+ fqMkILmeW6g2IvKb1T0f8TX3GSF5WgSPE9eXFYl19_n7QiPxwR7aOzMqw2r0gDq7hjpdO924OH9O
+ rAWDZb6cM3rKvPyejzOrFCJmy9BI0pW4pDUDiuZekuBrbHWGFwiNroz7fKcbzjtEmbOQB4cC2GHt
+ kHGCoF496WC395dRdGupsUWXcydJLk9uSFKoVdO9qxooqWXlGcPhf1fna8Pyp2wiimgB5_YvdXp1
+ Rz9poY_S.CrHE.IOZLyAHVAvmmYpHk825fi44ZMwqkXGwwGMKL9M36XuNL3vzSIqkPE47eGJmNxa
+ K3g0EH3bpteENJ6qwYWvY3fiyuvnh6jrnCNt032tpC1xgMkeKK7vu1.Mn4R1709kO0B_YPUvRMMD
+ GkRzH0taN7nuUhKggkAh5cApgFiQYMappIOO9WbxHS4TOtJXBfFQ-
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic310.consmr.mail.bf2.yahoo.com with HTTP; Sun, 17 Nov 2019 01:57:34 +0000
+Date: Sun, 17 Nov 2019 01:57:31 +0000 (UTC)
+From: Nemo MacNaught <nemomacnaught@aol.com>
+To: nemomacnaught@yahoo.com, nemo.macnaught@gmail.com
+Message-ID: <605875929.852919.1573955851202@mail.yahoo.com>
+Subject: RE: Thread: 002, more of the same
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_852918_411234501.1573955851201"
+References: <605875929.852919.1573955851202.ref@mail.yahoo.com>
+X-Mailer: WebService/1.1.14728 aolandroid Mozilla/5.0 (Linux; Android 6.0.1; SM-J700H Build/MMB29K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.96 Mobile Safari/537.36 AolApp/5.10.1.1.2324
+Content-Length: 2091
+
+------=_Part_852918_411234501.1573955851201
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+AOL Android app
+
+No formatting options.
+
+Emoji: =F0=9F=8D=84=F0=9F=8D=84=F0=9F=98=86=F0=9F=8D=84=F0=9F=8D=84
+
+
+=E9=A4=83=E5=AD=90=E9=AD=9A=E5=BA=A7
+On Saturday, November 16, 2019 nemomacnaught <nemomacnaught@yahoo.com> wrot=
+e:
+Another simple test from Samsung Email for Android.=C2=A0
+But multiple paragraphs.=C2=A0
+Formatted text.=C2=A0
+Emoji:=F0=9F=8D=8D=F0=9F=8D=8D=F0=9F=98=85=F0=9F=8D=8D=F0=9F=8D=8D
+=E3=81=9D=E3=81=97=E3=81=A6=E3=80=81=E6=97=A5=E6=9C=AC=E8=AA=9E=E3=82=82=E3=
+=81=82=E3=82=8B=E3=80=82
+
+
+Sent from my Samsung Galaxy smartphone.
+------=_Part_852918_411234501.1573955851201
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p dir=3D"ltr">AOL Android app</p>
+<p dir=3D"ltr">No formatting options.</p>
+<p dir=3D"ltr">Emoji: &#127812;&#127812;&#128518;&#127812;&#127812;<br></p>
+<p dir=3D"ltr">&#39171;&#23376;&#39770;&#24231;</p>
+</br></br><div class=3D"device_aol_et_org_dt_dd_quote"></div><hr style=3D"b=
+order:0;height:1px;color:#999;background-color:#999;width:100%;margin:0 0 9=
+px 0;padding:0;"></hr><span style=3D"font-size:14px; color:#999999;">On Sat=
+urday, November 16, 2019 nemomacnaught &#60;<span style=3D"color:#0000A0">n=
+emomacnaught@yahoo.com</span>&#62; wrote:</span><br></br><div id=3D"yiv0180=
+809386"><html><head></head><div><div>Another simple test from Samsung Email=
+ for Android.&nbsp;</div><div><br></div><div>But multiple paragraphs.&nbsp;=
+</div><div><br></div><div><u>Formatted</u> text.&nbsp;</div><div><br></div>=
+<div>Emoji:=F0=9F=8D=8D=F0=9F=8D=8D=F0=9F=98=85=F0=9F=8D=8D=F0=9F=8D=8D</di=
+v><div><br></div><div>=E3=81=9D=E3=81=97=E3=81=A6=E3=80=81=E6=97=A5=E6=9C=
+=AC=E8=AA=9E=E3=82=82=E3=81=82=E3=82=8B=E3=80=82</div><div><br></div><div><=
+br></div><div><br></div><div id=3D"yiv0180809386composer_signature"><div st=
+yle=3D"font-size:85%;color:#575757;">Sent from my Samsung Galaxy smartphone=
+.</div></div></div></html></div>
+------=_Part_852918_411234501.1573955851201--

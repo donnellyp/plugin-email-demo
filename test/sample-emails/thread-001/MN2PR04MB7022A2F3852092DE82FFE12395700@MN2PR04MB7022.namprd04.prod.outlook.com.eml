@@ -1,0 +1,158 @@
+Delivered-To: nemo.macnaught@gmail.com
+Received: by 2002:a9f:2633:0:0:0:0:0 with SMTP id 48csp10763464uag;
+        Thu, 14 Nov 2019 18:27:32 -0800 (PST)
+X-Google-Smtp-Source: APXvYqxVXxEaJBRYmEzWDso1/yjA+h0ekIBTLo5rmXjD++KYdGdT5mcQmo/iKF39ypvVv/29cIVh
+X-Received: by 2002:a17:906:1249:: with SMTP id u9mr10415206eja.253.1573784852504;
+        Thu, 14 Nov 2019 18:27:32 -0800 (PST)
+ARC-Seal: i=2; a=rsa-sha256; t=1573784852; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=NWSuXeEcPshvPjrdEfeRs05glwhjGcA/H5+7ol4CyaTyI0Yw0P8LD/RtZv2Ewu/2JD
+         bwdmcwoVWnK1IahiZR2OyTUi43PS4/siqHezg+34Aru1wDumPApzwVKlQQTLP8uaa2jA
+         vn/MuSYuI0ByxXoj1cN0kiWjhqjAqILlICsbRl4QPERfPd08uRw91oph+nAHA8OuvPFN
+         c7hJ7KMfrdd0Oj4UyDqnUXPKJeHR8uhwIJFu2cw5MFoCU5aYrBRWqMoClB3wkqwekm2s
+         FoZf9ITY3XPvEBOMK8SCGWBntxs7Czm1TmHUghVJagEqDc0xexHkjadwgu8t/bFHtBOG
+         MSsA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:in-reply-to
+         :references:message-id:date:thread-index:thread-topic:subject:cc:to
+         :from:dkim-signature;
+        bh=fs8ay7OH5LFIZlQ5r+z9yzHLwKyW4JlbM2G0wkBhwrE=;
+        b=Eupk/lOr1JKS560p7DyHs9bxe4SSRrYElbz9qSEU51a1Z4QYWqnh4BNwe1tFI/tg76
+         AtMrHqcM0iVE1VH5xTMaFoYya4eYBXNHkLnGfnL0gl9nYFiHpCvPEQBCvg6MSX45OvBk
+         ci7ZCC8A75Kgr6Awb49LhRi+AQLczQdJaT3zOwGb+Ow5jo+w7Xk3DVsSO6+e3yiqIaO+
+         V9SZ5Ps4iq6X+V8viOGDXUCbTfu0BBtM28pM6EAvFgsXef8MUsXPKd7Uj9wfeY6CewfQ
+         toZOg47YA4nX1Rque/wqAHdH9eJIfTc/mNtOJAjQLdisol22QwHE/wpzpDhf9qs07Fyz
+         AB9g==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@outlook.com header.s=selector1 header.b=cTd9uvfc;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of nemo.macnaught@outlook.com designates 40.92.4.89 as permitted sender) smtp.mailfrom=nemo.macnaught@outlook.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=outlook.com
+Return-Path: <nemo.macnaught@outlook.com>
+Received: from NAM02-CY1-obe.outbound.protection.outlook.com (mail-oln040092004089.outbound.protection.outlook.com. [40.92.4.89])
+        by mx.google.com with ESMTPS id l12si6039659edk.60.2019.11.14.18.27.32
+        for <nemo.macnaught@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 14 Nov 2019 18:27:32 -0800 (PST)
+Received-SPF: pass (google.com: domain of nemo.macnaught@outlook.com designates 40.92.4.89 as permitted sender) client-ip=40.92.4.89;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@outlook.com header.s=selector1 header.b=cTd9uvfc;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of nemo.macnaught@outlook.com designates 40.92.4.89 as permitted sender) smtp.mailfrom=nemo.macnaught@outlook.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=outlook.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=ZRRP/k4vkwmQadTK0cTWZM4DHKPLrTfFBpErpgRgNkqhiY9Q5K2/3NRtHDz6UAYB9vWIidgiXZSwgaxJrfKwcEKrjlVcPZ1izYn0THLIJmz8BpViFT6xFY7qGV9G8nM2B57j15MwN/O4o6yDVry0EriR8BX8AKcFGbktLUOJFfh3JLqrLoE1us8Yl5BRO0I0xeiqVafmbMPaL0tQ9gar6+QMX4x3AcR3Vt1V/irxtDkGMLIeon+k66Tra6stQUi5mw6P4aCdH7vc9NINFd7Tu9uZ68ptxHkuX70CrAr10XL2q7MrprYb3FLJI6abWrSp8wwbTXHImQO/e2q9VW0ZkA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=fs8ay7OH5LFIZlQ5r+z9yzHLwKyW4JlbM2G0wkBhwrE=;
+ b=Jylet3JCAkLbD0PLvuedf0zBfTXzNl1c3DyallZUKvmN+XWQsLNfQZ9TaBz3O/Z64G5w/ULyb7j02fqsknA+iP7SG4vKqagJywo2vFeSW6SxJZaHHSVVTuLQzX9/VwQIAzwXCYIGOQ9IO5bh3GkzZ+s2BLGB9E8cSU/5ojSxnI/TVEDvMMK4+GneAMS0Ij9rUF9Ol7Gw9AqBgt4NHrcgciZl7rQDin26Xwia1lggHdU4RhjlkMvn5QFjW9xBoX2yE/ZBE5xX3piswe+X9qAqDXjSSVBDbRq4GjGF41zS2C3PsSHAls4/5VLhyyb9L1d0NA93tv58f7a5DCZTFR6T8Q==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=outlook.com;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=fs8ay7OH5LFIZlQ5r+z9yzHLwKyW4JlbM2G0wkBhwrE=;
+ b=cTd9uvfcbwDXk6umqmlX5ef0IcbfqyB2MlbYKhSXx8IGFdsvd56laihOlxrYsO3JywML0PzbAkBsMz+WyOiyVbJtxwRxg8mfPBcyoSnhP/HchoCWXeiFYB+mcjHzj1UWKfiWSvb+tTnWVKle10+jiFf4y5tu7l/JO5+BA4nl5vtF48VyKJkDFXwmqmqZL4jKuckd7uz0OxsnBdvBJ0Uw0u7GFZp4CQi+oH/jd1fR/nuKGozBIxNZkSoLXwBPoLz8N1n+LAHo2cocZrcQ7zdHeiKKs5XvEIBQ+GWgLi6WW6h+R68Ejw+hC1MJqK5u4NHnfR1ZANbVYpH1ot1PqskSDg==
+Received: from CY1NAM02FT019.eop-nam02.prod.protection.outlook.com
+ (10.152.74.58) by CY1NAM02HT089.eop-nam02.prod.protection.outlook.com
+ (10.152.74.171) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2451.23; Fri, 15 Nov
+ 2019 02:27:30 +0000
+Received: from MN2PR04MB7022.namprd04.prod.outlook.com (10.152.74.59) by
+ CY1NAM02FT019.mail.protection.outlook.com (10.152.75.177) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2451.23 via Frontend Transport; Fri, 15 Nov 2019 02:27:30 +0000
+Received: from MN2PR04MB7022.namprd04.prod.outlook.com
+ ([fe80::258b:f816:f420:7bda]) by MN2PR04MB7022.namprd04.prod.outlook.com
+ ([fe80::258b:f816:f420:7bda%3]) with mapi id 15.20.2451.023; Fri, 15 Nov 2019
+ 02:27:30 +0000
+From: Nemo MacNaught <nemo.macnaught@outlook.com>
+To: Nemo MacNaught <nemo.macnaught@gmail.com>, Nemo MacNaught
+	<nemo.macnaught@mail.ru>
+CC: nemomacnaught <nemomacnaught@yahoo.com>
+Subject: Re: Re[3]: This subject line is so fancy
+Thread-Topic: Re[3]: This subject line is so fancy
+Thread-Index: AQHVm1h0mvam3THv5EmZCz5I9xuxcaeLe0eAgAAATQ4=
+Date: Fri, 15 Nov 2019 02:27:30 +0000
+Message-ID:
+ <MN2PR04MB7022A2F3852092DE82FFE12395700@MN2PR04MB7022.namprd04.prod.outlook.com>
+References: <1573779328.466488219@f144.i.mail.ru>
+ <CADpz9gACzi9eZTaRYuw31iBZA33hSiGFbANAGcJ=DUwJD-wKSg@mail.gmail.com>
+ <1573783113.223660738@f530.i.mail.ru>
+ <1573783225.558368290@f745.i.mail.ru>,<CADpz9gABJ2UtfKk9G8ULLfJ-bwXi10bhZKWb1+udgwsyd4FPag@mail.gmail.com>
+In-Reply-To:
+ <CADpz9gABJ2UtfKk9G8ULLfJ-bwXi10bhZKWb1+udgwsyd4FPag@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-incomingtopheadermarker:
+ OriginalChecksum:304627A62018C92320D4932FF8AA9801EE661615908475E7D37B9DB325481B7D;UpperCasedChecksum:A0A89CB76D67CBC54B26750C69B5FB51E04CD52BFB9CD97E632061B065F56D1E;SizeAsReceived:7191;Count:45
+x-tmn: [etvd4vsvmtyBGVBhZEoThN/QpwTUSiNMZkohDa5CRhw=]
+x-ms-publictraffictype: Email
+x-incomingheadercount: 45
+x-eopattributedmessage: 0
+x-ms-office365-filtering-correlation-id: 5d7ab975-ff85-48f1-28b0-08d769735d94
+x-ms-traffictypediagnostic: CY1NAM02HT089:
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info:
+ 0CAcp5xeDhpFT9eL03WFXitXSTVRQk1qH3lpdSgOduOv/aNmm5fZm5Q6w05IqR3pbh/1ZY+pA4IJekxma74jIUBz1NNa1JiZysivy5avuheTb61/fc2k9InN/Z371JwY4n3Ks7VekPQzKo9aymeyFz1i1lB+D99ewwO8yThFVGgnppF3C8Dr01OWgGikgDho
+x-ms-exchange-transport-forked: True
+Content-Type: multipart/alternative;
+	boundary="_000_MN2PR04MB7022A2F3852092DE82FFE12395700MN2PR04MB7022namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-Network-Message-Id: 5d7ab975-ff85-48f1-28b0-08d769735d94
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-originalarrivaltime: 15 Nov 2019 02:27:30.7873
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CY1NAM02HT089
+
+--_000_MN2PR04MB7022A2F3852092DE82FFE12395700MN2PR04MB7022namp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+First reply from the outlook iOS client.
+
+Get Outlook for iOS<https://aka.ms/o0ukef>
+
+--_000_MN2PR04MB7022A2F3852092DE82FFE12395700MN2PR04MB7022namp_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+</head>
+<body>
+<div dir=3D"ltr" text-align=3D"left">
+<div dir=3D"ltr" text-align=3D"left" data-ogsc=3D"" style=3D"">
+<div dir=3D"ltr" text-align=3D"left" data-ogsc=3D"" style=3D"">
+<div dir=3D"ltr" text-align=3D"left" data-ogsc=3D"" style=3D"">
+<div dir=3D"ltr" text-align=3D"left" data-ogsc=3D"" style=3D"">
+<div></div>
+<div data-ogsc=3D"" style=3D"">
+<div>
+<div style=3D"direction: ltr;">First reply from the outlook iOS client.</di=
+v>
+</div>
+<div><br>
+</div>
+<div class=3D"ms-outlook-ios-signature">Get <a href=3D"https://aka.ms/o0uke=
+f" data-ogsc=3D"" style=3D"">
+Outlook for iOS</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+--_000_MN2PR04MB7022A2F3852092DE82FFE12395700MN2PR04MB7022namp_--

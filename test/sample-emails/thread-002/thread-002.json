@@ -1,0 +1,200 @@
+[
+  {
+    "index": 0,
+    "message_id": "lbp6lry579p5100moap1ca5r.1573955495786@email.android.com",
+    "email_client": "Samsung Email Android App",
+    "current_content": "Another simple test from Samsung Email for Android. \n\nBut multiple paragraphs. \n\nFormatted text. \n\nEmoji:🍍🍍😅🍍🍍\n\nそして、日本語もある。",
+    "signature": "",
+    "signature_nag": "Sent from my Samsung Galaxy smartphone.",
+    "comments": ""
+  },
+  {
+    "index": 1,
+    "message_id": "605875929.852919.1573955851202@mail.yahoo.com",
+    "email_client": "AOL Android App",
+    "current_content": "AOL Android app\n\nNo formatting options.\n\nEmoji: 🍄🍄😆🍄🍄\n\n餃子魚座",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 2,
+    "message_id": "313419364.871364.1573956370533@mail.yahoo.com",
+    "email_client": "AOL iOS App",
+    "current_content": "AOL iOS App\n\nNo formatting options.\n\nEmoji: 🚨🚨⛷🚨🚨\n\nシーツの上がすごく暗い！枕だ！",
+    "signature": "",
+    "signature_nag": "Sent from AOL Mobile Mail\nGet the new AOL app: mail.mobile.aol.com",
+    "comments": ""
+  },
+  {
+    "index": 3,
+    "message_id": "291467901.865340.1573956954280@mail.yahoo.com",
+    "email_client": "AOL Desktop Browser",
+    "current_content": "AOL Desktop Browser\n\nMany formatting options.",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 4,
+    "message_id": "BY5PR04MB67237142A1EFF76765198274A3720@BY5PR04MB6723.namprd04.prod.outlook.com",
+    "email_client": "Outlook Android App",
+    "current_content": "Outlook Android App\n\nNibble, nibble.",
+    "signature": "",
+    "signature_nag": "Get Outlook for Android",
+    "comments": ""
+  },
+  {
+    "index": 5,
+    "message_id": "BY5PR04MB6723E204D761028CE6B8316CA3720@BY5PR04MB6723.namprd04.prod.outlook.com",
+    "email_client": "Outlook Android App",
+    "current_content": "[Wikipedia](https://wikipedia.org)",
+    "signature": "Nemo McNaught",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 6,
+    "message_id": "BY5PR04MB6723737C8C1A096C937401FFA3720@BY5PR04MB6723.namprd04.prod.outlook.com",
+    "email_client": "Outlook Android App",
+    "current_content": "Outlook Android App\n\nNo formatting.",
+    "signature": "Nemo McNaught",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 7,
+    "message_id": "61775136.866141.1573958837144@mail.yahoo.com",
+    "email_client": "Yahoo iOS App",
+    "current_content": "Yahoo iOS App\n\n**_Basic_** formatting.",
+    "signature": "Nemo McNaught",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 8,
+    "message_id": "CADpz9gD2_iJo0bJB=aHYJmSV-+a5cwWnV7HabUzsWOha=20Z9w@mail.gmail.com",
+    "email_client": "Gmail Mobile Browser",
+    "current_content": "Gmail mobile Browser\n\nThe Gmail email client that can’t do anything but attachments.",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 9,
+    "message_id": "CADpz9gCO==EeHPNfUf9B=RhYJJ1vT08KiSZ4-K-0+57Doj4iuQ@mail.gmail.com",
+    "email_client": "Gmail Basic HTML Browser",
+    "current_content": "Gmail desktop basic html browser\n\nIn case you needed to remember what the first version of gmail looked like...",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 10,
+    "message_id": "CADpz9gC6npJhCyOLRUV8_gvSxrvQkAzVi-7Mtzavrwf0hkK=Wg@mail.gmail.com",
+    "email_client": "Gmail iOS App",
+    "current_content": "Gmail iOS App.",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 11,
+    "message_id": "CADpz9gBgWyfVrTxQPon-599rp7XWtN5sjR8xikqWU55tauPfbw@mail.gmail.com",
+    "email_client": "Gmail Desktop Browser",
+    "current_content": "Changed Gmail Desktop Browser's language to Japanese.\n\n笑",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 12,
+    "message_id": "08a41a39-e38c-104b-31c4-1e3de6ee66b6@aol.com",
+    "email_client": "Thunderbird",
+    "current_content": "Thunderbird Desktop\n\nBy default, Thunderbird starts a response below the thread history, though this is configurable.",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 13,
+    "message_id": "1039c12c-4e9d-4f51-a170-01de01bddcf1@Spark",
+    "email_client": "Spark iOS App",
+    "current_content": "Spark iOS\n\nMultiple paragraphs",
+    "signature": "Nemo MacNaught",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 14,
+    "message_id": "LtuVLz8--3-1@tutanota.com",
+    "email_client": "Tutanota Mobile Browser",
+    "current_content": "Tutanota Mobile Browser\n\n*   Billeted Lists\n\n1.  numbered lists\n\n**bold**\n\nunderline\n\n_italic_\n\ncode\n\n[links](https://Https://Wikipedia.com)\n\nfont sizes but not typefaces\n\nleft, right, center alignment and justification\n\ninline images, regular attachments\n\nno blockquotes",
+    "signature": "",
+    "signature_nag": "Securely sent with Tutanota. Get your own encrypted, ad-free mailbox:\nhttps://tutanota.com",
+    "comments": ""
+  },
+  {
+    "index": 15,
+    "message_id": "LtuWEm1--3-1@tutanota.com",
+    "email_client": "Tutanota iOS App",
+    "current_content": "Tutanota iOS\n\nexactly like mobile browser, but no inline images",
+    "signature": "",
+    "signature_nag": "Securely sent with Tutanota. Get your own encrypted, ad-free mailbox:\nhttps://tutanota.com",
+    "comments": ""
+  },
+  {
+    "index": 16,
+    "message_id": "MN2PR04MB70226CDCB358FC692BB12E7095720@MN2PR04MB7022.namprd04.prod.outlook.com",
+    "email_client": "Outlook iOS App",
+    "current_content": "Outlook iOS\n\nAdding Zoho Mail address",
+    "signature": "",
+    "signature_nag": "Get Outlook for iOS",
+    "comments": ""
+  },
+  {
+    "index": 17,
+    "message_id": "16e7aa5acf1.ebeb7f6967030.7198538982954324711@zohomail.com",
+    "email_client": "Zoho iOS App",
+    "current_content": "Zoho Mail iOS\n\nAttachments. No inline images.\n\n**_Formatting_**? Just b u i.",
+    "signature": "",
+    "signature_nag": "Sent from Zoho Mail on iPhone",
+    "comments": ""
+  },
+  {
+    "index": 18,
+    "message_id": "Ltuki3X--7-1@tutanota.com",
+    "email_client": "Tutanota Android App",
+    "current_content": "Tutanota Android\n\nSame features as Tutanota iOS.",
+    "signature": "",
+    "signature_nag": "Securely sent with Tutanota. Get your own encrypted, ad-free mailbox:\nhttps://tutanota.com",
+    "comments": ""
+  },
+  {
+    "index": 19,
+    "message_id": "542246BA-EBC2-447F-9D0F-C63566CFCEF5@edison.tech",
+    "email_client": "Edison Mail iOS App",
+    "current_content": "Edison Mail iOS.\n\n**_Formatting_**  is just b u i.\n\nInline images. Attachments.",
+    "signature": "",
+    "signature_nag": "",
+    "comments": ""
+  },
+  {
+    "index": 20,
+    "message_id": "16e7b25c421.120b79d4c22851.6358548991858486215@zohomail.com",
+    "email_client": "Zoho Desktop Browser",
+    "current_content": "Zoho desktop browser\n\nbold italic underline strike through typeface font size text color highlight color alignment justify bullets numbered list indent\n\nand line spacing... believe it or not.\n\nAttachments.\n\nno blockquote.",
+    "signature": "",
+    "signature_nag": "Sent using Zoho Mail",
+    "comments": ""
+  },
+  {
+    "index": 21,
+    "message_id": "LtvsNk8--3-1@tutanota.com",
+    "email_client": "Tutanota Desktop Browser",
+    "current_content": "Tutanota Desktop Browser.\n\nSame features as Tutanota Mobile Browser\n\nThis is what a copied blockquote looks like:\n\n> Zoho desktop browser\n>\n> bold italic underline strike through typeface font size text color highlight color alignment justify bullets numbered list indent\n>\n> and line spacing... believe it or not.\n\nEnd of blockquote.",
+    "signature": "",
+    "signature_nag": "Securely sent with Tutanota. Get your own encrypted, ad-free mailbox:\nhttps://tutanota.com",
+    "comments": ""
+  }
+]

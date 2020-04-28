@@ -1,0 +1,136 @@
+Delivered-To: nemo.macnaught@gmail.com
+Received: by 2002:a9f:2633:0:0:0:0:0 with SMTP id 48csp10743786uag;
+        Thu, 14 Nov 2019 17:58:34 -0800 (PST)
+X-Google-Smtp-Source: APXvYqz6G+h4Nj6bX5mtjDwzotos9R65x1ZPkGP3N5E0iF9LaQEyMuitRlIaQLA+l7YnQJ/TIt2f
+X-Received: by 2002:a2e:574d:: with SMTP id r13mr1332625ljd.10.1573783114700;
+        Thu, 14 Nov 2019 17:58:34 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1573783114; cv=none;
+        d=google.com; s=arc-20160816;
+        b=fZS7S+9jpLJljhi1TIH27H8xgUfCJHEDVaX8Y9dsvYjJocC+GUi1do1x7OhkwFCyH9
+         6ZiiT7MdgEOTkIm5I1TON2J9xL7joEZ56l0sIKRG3EcmkYaCtQgWzio052I5iMGUpX2m
+         nyLY0UJIcljTKe/wVhSzqZrN0Qd+nT6KX8PjnggRtIIy277Q/jIvNJR4x+Sy6zSWfMOl
+         5BwmFlIvvhtAgDgDclDnalLfTpaBdF+5WJho5n+kSTJx0O+qb5Ro5pz2e4s1pBuiRZzR
+         9uTVEkZHRzsX0LUAE98M1SZLL5teqDPM7mRxBF0Ezjr+CjlGjznHk35tioL6EPw7nBIX
+         uuTw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=references:in-reply-to:message-id:reply-to:date:mime-version
+         :subject:cc:to:from:dkim-signature;
+        bh=CYv195eSj0jotINLXOG/Vc/jwV+NpIzH2T9a4k0OiUU=;
+        b=V1zkJD0PvCQEPVh4POxaq9P5gfaoAibJ3PfTXnainHspT+BtcJBZGaY3SYXiiSMyIe
+         0pAeXoumc8pdJLxKr41YXRvbxw7szimaWThOy2U48vHQiXZ97D1lAo4rlAr0MG17uGrO
+         uxSorjdeSroG/fma0B8tXMyDRm+BScqTb60f06I7dPLoTBo/phS3WCsP+pYLHhI6zN9F
+         MVnruTO9LIPU3j8Wv0Zh7oVETQHobgwwA+2yAsLSR5yB1qd5sSXmMoBX4I3ceGbUI74k
+         7UFck0fSr46CDxUBW05cnJgjiljOeZYqkdLnvG560eU/XXqg5fj5qjNDGil7qJDHKRg5
+         PQJA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mail.ru header.s=mail2 header.b=c2u4ioOx;
+       spf=pass (google.com: domain of nemo.macnaught@mail.ru designates 94.100.184.39 as permitted sender) smtp.mailfrom=nemo.macnaught@mail.ru;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=mail.ru
+Return-Path: <nemo.macnaught@mail.ru>
+Received: from f530.i.mail.ru (f530.i.mail.ru. [94.100.184.39])
+        by mx.google.com with ESMTPS id s28si6624726ljo.174.2019.11.14.17.58.34
+        for <nemo.macnaught@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 14 Nov 2019 17:58:34 -0800 (PST)
+Received-SPF: pass (google.com: domain of nemo.macnaught@mail.ru designates 94.100.184.39 as permitted sender) client-ip=94.100.184.39;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail.ru header.s=mail2 header.b=c2u4ioOx;
+       spf=pass (google.com: domain of nemo.macnaught@mail.ru designates 94.100.184.39 as permitted sender) smtp.mailfrom=nemo.macnaught@mail.ru;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=mail.ru
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mail.ru; s=mail2;
+	h=References:In-Reply-To:Content-Type:Message-ID:Reply-To:Date:MIME-Version:Subject:Cc:To:From; bh=CYv195eSj0jotINLXOG/Vc/jwV+NpIzH2T9a4k0OiUU=;
+	b=c2u4ioOxexIWXHvMkEAHomoM+pzewzWZoQd8oR/EyvF9mbNZnr9Xy2ho5ZEfsXnTVZYGHY8UGCFeC+75XXw/YVOsVm5KxnQACGlz5waLRyNk5iEtpwB2CLAABawAfoyg0tYzvT+QvaKtWbwLb+8kxuwQTMhJKl436UoreSLyUOo=;
+Received: by f530.i.mail.ru with local (envelope-from <nemo.macnaught@mail.ru>)
+	id 1iVQsb-0000bA-KB; Fri, 15 Nov 2019 04:58:33 +0300
+Received: by e.mail.ru with HTTP;
+	Fri, 15 Nov 2019 04:58:33 +0300
+From: =?UTF-8?B?TmVtbyBNYWNOYXVnaHQ=?= <nemo.macnaught@mail.ru>
+To: =?UTF-8?B?TmVtbyBNYWNOYXVnaHQ=?= <nemo.macnaught@gmail.com>
+Cc: =?UTF-8?B?bmVtb21hY25hdWdodA==?= <nemomacnaught@yahoo.com>,
+	nemo.macnaught@oitlook.com
+Subject: =?UTF-8?B?UmVbMl06IFRoaXMgc3ViamVjdCBsaW5lIGlzIHNvIGZhbmN5?=
+MIME-Version: 1.0
+X-Mailer: Mail.Ru Mailer 1.0
+Date: Fri, 15 Nov 2019 04:58:33 +0300
+Reply-To: =?UTF-8?B?TmVtbyBNYWNOYXVnaHQ=?= <nemo.macnaught@mail.ru>
+X-Priority: 3 (Normal)
+Message-ID: <1573783113.223660738@f530.i.mail.ru>
+Content-Type: multipart/alternative;
+	boundary="--ALT--fb189fa4d5d1441791ebcfd7c9607ff31573783113"
+Authentication-Results: f530.i.mail.ru; auth=pass smtp.auth=nemo.macnaught@mail.ru smtp.mailfrom=nemo.macnaught@mail.ru
+X-77F55803: EBF4797D19F75F727F9F52485CB584D7EA5C12FFEB6BB262FCEA222AEDA47A3F789562383160D794ECACBFCFB1AF8D0A08D917D6130B1AFB
+X-7FA49CB5: 70AAF3C13DB7016878DA827A17800CE722D78D8DB956E0A0D82A6BABE6F325ACA01ED31736435A1F1B59CA4C82EFA658B1DED151389FE265A55EAFB1E448F9F2F6B57BC7E64490618DEB871D839B73339E8FC8737B5C224952D31B9D28593E51CC7F00164DA146DAFE8445B8C89999725571747095F342E8C26CFBAC0749D213D2E47CDBA5A9658378DA827A17800CE767883B903EA3BAEA9FA2833FD35BB23DF004C906525384306FED454B719173D6725E5C173C3A84C35BC263641C57264ED2AD120F52A1E37C28A6D463EDFD0DBBC4224003CC836476C0CAF46E325F83A50BF2EBBBDD9D6B0F120AC0481C0DBBDE3B503F486389A921A5CC5B56E945C8DA
+X-Mailru-MI: 800
+X-Mailru-Sender: E23026D3BC528B44B03FF5554B18999FB67FC3E9F96E4BD294B0826F813D942421A9C3C6A71749652FF6CCD3459B5EEC418269429D9375E9AD1180273946ECB9B811C9261C7CA46BF38803FFF862B410E1A8CC087C9D8FD1C81C84FF228AFD23087B493C4F8BC23BD25F0A8BD79F64FE3453F38A29522196
+X-Mras: OK
+X-Spam: undefined
+In-Reply-To: <CADpz9gACzi9eZTaRYuw31iBZA33hSiGFbANAGcJ=DUwJD-wKSg@mail.gmail.com>
+References: <1573779328.466488219@f144.i.mail.ru>
+ <CADpz9gACzi9eZTaRYuw31iBZA33hSiGFbANAGcJ=DUwJD-wKSg@mail.gmail.com>
+
+
+----ALT--fb189fa4d5d1441791ebcfd7c9607ff31573783113
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+ClRoaXMgaXMgYSByZXBseSBmcm9tIHRoZSBtYWlsLnJ1IGlPUyBhcHAuIEFzIHRoZSBzaWduYXR1
+cmUgc2F5cy4KCgoKU2VudCBmcm9tIE1haWwucnUgYXBwIGZvciBpT1MKCgpUaHVyc2RheSwgTm92
+ZW1iZXIgMTQsIDIwMTksIDE3OjA1IC0wODAwIGZyb20gbmVtby5tYWNuYXVnaHQgIDxuZW1vLm1h
+Y25hdWdodEBnbWFpbC5jb20+Ogo+VGhpcyBpcyBhIHJlcGx5IGZyb20gdGhlIEdtYWlsIHdlYiBj
+bGllbnQuCj4KPk9uIFRodSwgTm92IDE0LCAyMDE5IGF0IDQ6NTUgUE0gTmVtbyBNYWNOYXVnaHQg
+PCBuZW1vLm1hY25hdWdodEBtYWlsLnJ1ID4gd3JvdGU6Cj4+SW5pdGlhbCBlbWFpbC4KPj7CoAo+
+Pi0tCj4+TmVtbyBNYWNOYXVnaHQ=
+
+----ALT--fb189fa4d5d1441791ebcfd7c9607ff31573783113
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+CjxIVE1MPjxCT0RZPjxkaXYgaWQ9ImNvbXBvc2VXZWJWaWV3X2VkaXRhYmxlX2NvbnRlbnQiIGRh
+dGEtbWFpbHJ1YXBwLWNvbXBvc2UtaWQ9ImNvbXBvc2VXZWJWaWV3X2VkaXRhYmxlX2NvbnRlbnQi
+IHN0eWxlPSJ0ZXh0LWFsaWduOiBsZWZ0OyI+PGRpdj5UaGlzIGlzIGEgcmVwbHkgZnJvbSB0aGUg
+bWFpbC5ydSBpT1MgYXBwLiBBcyB0aGUgc2lnbmF0dXJlIHNheXMuPC9kaXY+PGRpdj48YnI+PC9k
+aXY+PGRpdiBpZD0ibWFpbC1hcHAtYXV0by1kZWZhdWx0LXNpZ25hdHVyZSI+PGJyPjxicj5TZW50
+IGZyb20gTWFpbC5ydSBhcHAgZm9yIGlPUzxicj48L2Rpdj48YnI+PGJyPlRodXJzZGF5LCBOb3Zl
+bWJlciAxNCwgMjAxOSwgMTc6MDUgLTA4MDAgZnJvbSBuZW1vLm1hY25hdWdodCAgJmx0O25lbW8u
+bWFjbmF1Z2h0QGdtYWlsLmNvbSZndDs6PGJyPjxkaXYgaWQ9ImNvbXBvc2VXZWJWaWV3X3ByZXZp
+b3VzZV9jb250ZW50IiBkYXRhLW1haWxydWFwcC1jb21wb3NlLWlkPSJjb21wb3NlV2ViVmlld19w
+cmV2aW91c2VfY29udGVudCI+PGJsb2NrcXVvdGUgaWQ9Im1haWwtYXBwLWF1dG8tcXVvdGUiIHN0
+eWxlPSJib3JkZXItbGVmdC13aWR0aDogMXB4OyBib3JkZXItbGVmdC1zdHlsZTogc29saWQ7IGJv
+cmRlci1sZWZ0LWNvbG9yOiByZ2IoMTEsIDEwMiwgMjQ5KTsgbWFyZ2luOiAxMHB4IDBweCAxMHB4
+IDVweDsgcGFkZGluZzogMHB4IDBweCAwcHggMTBweDsgZGlzcGxheTogaW5oZXJpdDsiIGRhdGEt
+ZGFya29zaGEtaWQ9IjE6MSI+PGRpdiBjbGFzcz0ianMtaGVscGVyIGpzLXJlYWRtc2ctbXNnIiBk
+YXRhLWRhcmtvc2hhLWlkPSIxOjIiIHN0eWxlPSIiPgoJPHN0eWxlIHR5cGU9InRleHQvY3NzIiBk
+YXRhLWRhcmtvc2hhLWlkPSIxOjMiIHN0eWxlPSIiPjwvc3R5bGU+CiAJPGRpdiBkYXRhLWRhcmtv
+c2hhLWlkPSIxOjQiIHN0eWxlPSIiPgoJCTxiYXNlIHRhcmdldD0iX3NlbGYiIGhyZWY9Imh0dHBz
+Oi8vZS5tYWlsLnJ1LyIgZGF0YS1kYXJrb3NoYS1pZD0iMTo1IiBzdHlsZT0iIj4KCQkKICAgICAg
+ICAgICAgPGRpdiBpZD0ic3R5bGVfMTU3Mzc3OTkzNTA5ODUxMjcyODJfQk9EWSIgZGF0YS1kYXJr
+b3NoYS1pZD0iMTo2IiBzdHlsZT0iIj48ZGl2IGNsYXNzPSJjbGFzc18xNTczNzkyMDk3IiBkYXRh
+LWRhcmtvc2hhLWlkPSIxOjciIHN0eWxlPSIiPjxkaXYgZGlyPSJsdHIiIGRhdGEtZGFya29zaGEt
+aWQ9IjE6OCIgc3R5bGU9IiI+PGRpdiBkaXI9Imx0ciIgZGF0YS1kYXJrb3NoYS1pZD0iMTo5IiBz
+dHlsZT0iIj5UaGlzIGlzIGEgcmVwbHkgZnJvbSB0aGUgR21haWwgd2ViIGNsaWVudC48YnIgZGF0
+YS1kYXJrb3NoYS1pZD0iMToxMCIgc3R5bGU9IiI+PC9kaXY+PGJyIGRhdGEtZGFya29zaGEtaWQ9
+IjE6MTEiIHN0eWxlPSIiPjxkaXYgY2xhc3M9Im1haWwtcXVvdGUtY29sbGFwc2UiIGRhdGEtZGFy
+a29zaGEtaWQ9IjE6MTIiIHN0eWxlPSIiPjxkaXYgY2xhc3M9ImdtYWlsX3F1b3RlX21haWxydV9j
+c3NfYXR0cmlidXRlX3Bvc3RmaXgiIGRhdGEtZGFya29zaGEtaWQ9IjE6MTMiIHN0eWxlPSIiPjxk
+aXYgZGlyPSJsdHIiIGNsYXNzPSJnbWFpbF9hdHRyX21haWxydV9jc3NfYXR0cmlidXRlX3Bvc3Rm
+aXgiIGRhdGEtZGFya29zaGEtaWQ9IjE6MTQiIHN0eWxlPSIiPk9uIFRodSwgTm92IDE0LCAyMDE5
+IGF0IDQ6NTUgUE0gTmVtbyBNYWNOYXVnaHQgJmx0OzxhIGhyZWY9Im1haWx0bzpuZW1vLm1hY25h
+dWdodEBtYWlsLnJ1IiB0YXJnZXQ9Il9ibGFuayIgcmVsPSIgbm9vcGVuZXIgbm9yZWZlcnJlciIg
+ZGF0YS1kYXJrb3NoYS1pZD0iMToxNSIgc3R5bGU9IiI+bmVtby5tYWNuYXVnaHRAbWFpbC5ydTwv
+YT4mZ3Q7IHdyb3RlOjxiciBkYXRhLWRhcmtvc2hhLWlkPSIxOjE2IiBzdHlsZT0iIj48L2Rpdj48
+YmxvY2txdW90ZSBjbGFzcz0iZ21haWxfcXVvdGVfbWFpbHJ1X2Nzc19hdHRyaWJ1dGVfcG9zdGZp
+eCIgc3R5bGU9Im1hcmdpbjogMHB4IDBweCAwcHggMC44ZXg7IGJvcmRlci1sZWZ0LXdpZHRoOiAx
+cHg7IGJvcmRlci1sZWZ0LXN0eWxlOiBzb2xpZDsgYm9yZGVyLWxlZnQtY29sb3I6IHJnYigyMDQs
+IDIwNCwgMjA0KTsgcGFkZGluZy1sZWZ0OiAxZXg7IiBkYXRhLWRhcmtvc2hhLWlkPSIxOjE3Ij4K
+PGRpdiBkYXRhLWRhcmtvc2hhLWlkPSIxOjE4IiBzdHlsZT0iIj48ZGl2IGRhdGEtZGFya29zaGEt
+aWQ9IjE6MTkiIHN0eWxlPSIiPkluaXRpYWwgZW1haWwuPC9kaXY+Cgo8ZGl2IGRhdGEtZGFya29z
+aGEtaWQ9IjE6MjAiIHN0eWxlPSIiPiZuYnNwOzwvZGl2PgoKPGRpdiBkYXRhLWRhcmtvc2hhLWlk
+PSIxOjIxIiBzdHlsZT0iIj4KPGRpdiBkYXRhLWRhcmtvc2hhLWlkPSIxOjIyIiBzdHlsZT0iIj4K
+PGRpdiBkYXRhLWRhcmtvc2hhLWlkPSIxOjIzIiBzdHlsZT0iIj4tLTxiciBkYXRhLWRhcmtvc2hh
+LWlkPSIxOjI0IiBzdHlsZT0iIj4KTmVtbyBNYWNOYXVnaHQ8L2Rpdj4KPC9kaXY+CjwvZGl2Pgo8
+L2Rpdj4KPC9ibG9ja3F1b3RlPjwvZGl2PjwvZGl2PjwvZGl2PgoKPC9kaXY+PC9kaXY+CiAgICAg
+ICAgICAgIAogICAgICAgIAoJCTxiYXNlIHRhcmdldD0iX3NlbGYiIGhyZWY9Imh0dHBzOi8vZS5t
+YWlsLnJ1LyIgZGF0YS1kYXJrb3NoYS1pZD0iMToyNSIgc3R5bGU9IiI+Cgk8L2Rpdj4KCgkKPC9k
+aXY+PC9ibG9ja3F1b3RlPjwvZGl2PjwvZGl2PjwvQk9EWT48L0hUTUw+Cg==
+
+----ALT--fb189fa4d5d1441791ebcfd7c9607ff31573783113--
